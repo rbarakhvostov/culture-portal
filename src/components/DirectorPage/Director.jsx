@@ -1,6 +1,10 @@
 import React from 'react';
 
 import { StaticQuery, graphql } from 'gatsby';
+import generateOverview from './Overview';
+import generateBio from './Bio';
+import generateWork from './Work';
+import generateImages from './Images';
 
 const DirectorPage = () => (
   <StaticQuery
@@ -13,6 +17,7 @@ const DirectorPage = () => (
           images
           description
           city
+          date
           bio {
             date
             description
@@ -30,7 +35,17 @@ const DirectorPage = () => (
     `}
     render={(data) => (
       <>
-        <div>{data.engJson.name}</div>
+        <div>Director</div>
+        {generateOverview(
+          data.engJson.name,
+          data.engJson.date,
+          data.engJson.city,
+          data.engJson.description,
+          data.engJson.img
+        )}
+        {generateBio(data.engJson.bio)}
+        {generateWork(data.engJson.work)}
+        {generateImages(data.engJson.images)}
       </>
     )}
   />
