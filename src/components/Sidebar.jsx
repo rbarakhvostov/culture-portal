@@ -1,22 +1,23 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Sidebar = () => (
   <nav>
     <ul>
       <li>
-        <a href="#">timeline</a>
+        <Link to="/director/#">timeline</Link>
       </li>
       <li>
-        <a href="#">masterpieces</a>
+        <Link to="/director/#">masterpieces</Link>
       </li>
       <li>
-        <a href="#">gallery</a>
+        <Link to="/director/#">gallery</Link>
       </li>
       <li>
-        <a href="#">videos</a>
+        <Link to="/director/#">videos</Link>
       </li>
       <li>
-        <a href="#">locations</a>
+        <Link to="/director/#">locations</Link>
       </li>
     </ul>
   </nav>
