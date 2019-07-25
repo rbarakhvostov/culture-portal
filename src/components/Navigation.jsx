@@ -10,6 +10,9 @@ const Navigation = () => (
       <li>
         <Link to="/search/">List of directors</Link>
       </li>
+      <li>
+        <Link to="/director/">Director</Link>
+      </li>
     </ul>
   </nav>
 );
