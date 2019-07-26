@@ -9,11 +9,9 @@ const Director = () => (
     <Sidebar />
   </>
 );
-
 const DirectorWrapper = () => (
   <Suspense fallback="loading">
     <Director />
   </Suspense>
 );
-
 export default DirectorWrapper;
