@@ -17,6 +17,6 @@ const Bio = (curDir) => {
   );
 
   return <div>{arr}</div>;
-}
+};
 
 export default Bio;

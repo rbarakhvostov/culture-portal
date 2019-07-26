@@ -3,8 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Overview = (director) => {
-  console.log(director);
-	const { t } = useTranslation(director);
+  const { t } = useTranslation(director);
   return (
     <>
       <div>
@@ -16,6 +15,6 @@ const Overview = (director) => {
       </div>
     </>
   );
-}
+};
 
 export default Overview;

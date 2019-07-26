@@ -19,6 +19,6 @@ const Work = (director) => {
   );
 
   return <div>{arr}</div>;
-}
+};
 
 export default Work;

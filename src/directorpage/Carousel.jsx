@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './carousel.css';
 
 const Carousel = (director) => {
-	const { t } = useTranslation(director);
+  const { t } = useTranslation(director);
 
   const arr = [];
 
@@ -13,7 +13,7 @@ const Carousel = (director) => {
   );
 
   return <div>{arr}</div>;
-}
+};
 
 export default Carousel;
 
