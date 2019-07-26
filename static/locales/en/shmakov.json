@@ -1,0 +1,66 @@
+{
+  "path": "/shmakov",
+  "lng": "en",
+  "name": "Fyodor Ivanovich Shmakov",
+  "date": "March 1, 1917 - May 2, 2009",
+  "city": "Vitebsk",
+  "description": "Belarusian actor, director. People's Artist of Belarus, People’s Artist of the USSR.",
+  "video": "https://www.youtube.com/watch?v=WckdzuNpPTU",
+  "mapData": [1111, 1111],
+  "bio": [
+    {
+      "date": "1917",
+      "description": "He was born on 1th March 1917 in Petrograd."
+    },
+    {
+      "date": "1939",
+      "description": "He graduated from the Leningrad Theatrical Institute and joined the company of the Russian Theater of the BSSR in Mogilev."
+    },
+    {
+      "date": "1941",
+      "description": "He began working at the Belarusian Second State Theater in Vitebsk (now the Yakub Kolas Belarusian Drama Theater). Shmakov appeared in the role of V. I. Lenin in Popov’s 'The Family', D. Zorin’s 'The Eternal Source', Shatrov’s 'The Sixth of July', and Pogodin’s 'The Third Pathétique'."
+    },
+    {
+      "date": "1957 ",
+      "description": "He started acting in movies, first time as Iusalov in 'Immortal Song'. Also, Rubin in 'Kochubei' (1958), and Andrei Razmetnov in 'Virgin Soil Upturned' (1960–61)."
+    },
+    {
+      "date": "1966",
+      "description": "He started working as a theater director."
+    }
+  ],
+  "work": [
+    {
+      "date": "1966",
+      "product": {
+        "title": "Fatherland",
+        "author": "K. Chorny"
+      },
+      "role": "Theater director"
+    },
+    {
+      "date": "1970",
+      "product": {
+        "title": "Seventeen Moments of Spring",
+        "author": "Semenova and Tokarev"
+      },
+      "role": "Theater director"
+    },
+    {
+      "date": "1974",
+      "product": {
+        "title": "Alarm",
+        "author": "A. Petrashkevich"
+      },
+      "role": "Theater director"
+    },
+    {
+      "date": "1952",
+      "product": {
+        "title": "Nesterka",
+        "author": "V. Volsky"
+      },
+      "role": "Theater director"
+    }
+  ]
+}
