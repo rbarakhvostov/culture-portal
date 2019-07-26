@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-function generateBio(curDir) {
+const Bio = (curDir) => {
   const { t } = useTranslation(curDir);
 
   const arr = [];
@@ -19,4 +19,4 @@ function generateBio(curDir) {
   return <div>{arr}</div>;
 }
 
-export default generateBio;
+export default Bio;

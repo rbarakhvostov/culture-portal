@@ -2,8 +2,8 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-function generateWork(curDir) {
-  const { t } = useTranslation(curDir);
+const Work = (director) => {
+  const { t } = useTranslation(director);
 
   const arr = [];
 
@@ -21,4 +21,4 @@ function generateWork(curDir) {
   return <div>{arr}</div>;
 }
 
-export default generateWork;
+export default Work;

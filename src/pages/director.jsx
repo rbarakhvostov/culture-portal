@@ -1,16 +1,23 @@
 import React, { Suspense } from 'react';
 
+import { useTranslation } from 'react-i18next';
 import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
-import DirectorPage from '../components/layout/DirectorPage'
+import Work from '../directorpage/Work'
+import Bio from '../directorpage/Bio'
+import Carousel from '../directorpage/Carousel'
+import Overview from '../directorpage/Overview'
 
-const curDir = 'alexandrovskaya';
+const director = 'alexandrovskaya';
 
 const Director = () => (
   <>
     <Header />
-    {DirectorPage(curDir)}
     <Sidebar />
+   	{Overview(director)}
+  	{Bio(director)}
+  	{Work(director)}
+  	{Carousel(director)}
   </>
 );
 

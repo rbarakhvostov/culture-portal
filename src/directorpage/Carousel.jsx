@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { useTranslation } from 'react-i18next';
-import './images.css';
+import './carousel.css';
 
-function generateImages(curDir) {
-	const { t } = useTranslation(curDir);
+const Carousel = (director) => {
+	const { t } = useTranslation(director);
 
   const arr = [];
 
@@ -15,6 +15,6 @@ function generateImages(curDir) {
   return <div>{arr}</div>;
 }
 
-export default generateImages;
+export default Carousel;
 
 // TODO add carousel
