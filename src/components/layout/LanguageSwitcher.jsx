@@ -5,7 +5,7 @@ import uniqid from 'uniqid';
 const LanguageSwitcher = () => {
   const languages = ['en', 'ru', 'by'];
   const { i18n } = useTranslation();
-  const [value, setValue] = useState(i18n.language);
+  const [value, setValue] = useState(i18n.language.slice(0, 2));
 
   const handleChange = (event) => {
     setValue(event.target.value);
