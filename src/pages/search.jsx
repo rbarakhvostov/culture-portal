@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-import Header from '../components/Header';
+import Header from '../components/layout/Header';
 
 const Search = () => (
   <>
     <Header />
-    <h1>search</h1>
   </>
 );
 
-export default Search;
+const SearchWrapper = () => (
+  <Suspense fallback="loading">
+    <Search />
+  </Suspense>
+);
+
+export default SearchWrapper;

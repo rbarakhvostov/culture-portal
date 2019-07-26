@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-import Header from '../components/Header';
+import '../utils/i18n';
+import Header from '../components/layout/Header';
 
 const Main = () => (
   <>
     <Header />
-    <h1>test</h1>
   </>
 );
 
-export default Main;
+const MainWrapper = () => (
+  <Suspense fallback="loading">
+    <Main />
+  </Suspense>
+);
+
+export default MainWrapper;
