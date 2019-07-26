@@ -1,8 +1,13 @@
 import React from 'react';
 
-function generateBio(bio) {
+import { useTranslation } from 'react-i18next';
+
+function generateBio(curDir) {
+  const { t } = useTranslation(curDir);
+
   const arr = [];
-  bio.forEach((item) =>
+
+  t('bio').forEach((item) =>
     arr.push(
       <>
         <div>{item.date}</div>
@@ -10,6 +15,7 @@ function generateBio(bio) {
       </>
     )
   );
+
   return <div>{arr}</div>;
 }
 

@@ -1,8 +1,13 @@
 import React from 'react';
 
-function generateWork(work) {
+import { useTranslation } from 'react-i18next';
+
+function generateWork(curDir) {
+  const { t } = useTranslation(curDir);
+
   const arr = [];
-  work.forEach((item) =>
+
+  t('work').forEach((item) =>
     arr.push(
       <>
         <h3>{item.product.title}</h3>
@@ -12,6 +17,7 @@ function generateWork(work) {
       </>
     )
   );
+
   return <div>{arr}</div>;
 }
 
