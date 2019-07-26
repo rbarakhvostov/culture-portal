@@ -13,7 +13,7 @@ const Searchbox = ({ filter }) => {
   return (
     <ul>
       {results
-        .filter((item) => item.includes(filter))
+        .filter((item) => item.toLowerCase().includes(filter.toLowerCase()))
         .map((item) => (
           <li key={uniqid()}>{item}</li>
         ))}
