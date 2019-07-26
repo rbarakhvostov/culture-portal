@@ -2,8 +2,8 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-const Bio = (curDir) => {
-  const { t } = useTranslation(curDir);
+const Bio = (director) => {
+  const { t } = useTranslation(director);
 
   const arr = [];
 
