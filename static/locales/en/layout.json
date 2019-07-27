@@ -3,6 +3,14 @@
   "link_main-page": "Main page",
   "link_search": "List of directors",
   "dev_team": "The Development team",
-  "dev_name": "Name 1",
-  "contribution": "Main page"
+  "first_dev_name": "Kuznetsova Svetlana",
+  "second_dev_name": "Name 2",
+  "third_dev_name": "Mamontov Vlad",
+  "fourth_dev_name": "Name 4",
+  "fifth_dev_name": "Danilova Oxana",
+  "first_dev_contribution": "Contribution 1",
+  "second_dev_contribution": "Contribution 2",
+  "third_dev_contribution": "Contribution 3",
+  "fourth_dev_contribution": "Contribution 4",
+  "fifth_dev_contribution": "Contribution 5"
 }

@@ -36,37 +36,37 @@ export default () => {
       <div className={styles.container}>
         <Card
           avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-          name={t('dev_name')}
-          githubAccount="Github account"
-          contribution={t('contribution')}
-          githubLink="/link.html"
+          name={t('first_dev_name')}
+          githubAccount="SvetlankaKuzyaka"
+          contribution={t('first_dev_contribution')}
+          githubLink="https://github.com/SvetlankaKuzyaka"
         />
         <Card
           avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-          name={t('dev_name')}
+          name={t('second_dev_name')}
           githubAccount="Github account2"
-          contribution={t('contribution')}
+          contribution={t('second_dev_contribution')}
           githubLink="/link.html"
         />
         <Card
           avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-          name={t('dev_name')}
-          githubAccount="Github account3"
-          contribution={t('contribution')}
-          githubLink="/link.html"
+          name={t('third_dev_name')}
+          githubAccount="vld-m"
+          contribution={t('third_dev_contribution')}
+          githubLink="https://github.com/vld-m"
         />
         <Card
           avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-          name={t('dev_name')}
+          name={t('fourth_dev_name')}
           githubAccount="Github account4"
-          contribution={t('contribution')}
+          contribution={t('fourth_dev_contribution')}
           githubLink="/link.html"
         />
         <Card
           avatar="https://avatars3.githubusercontent.com/u/47994020?s=460&v=4"
-          name={t('dev_name')}
+          name={t('fifth_dev_name')}
           githubAccount="OxanaDanilova"
-          contribution={t('contribution')}
+          contribution={t('fifth_dev_contribution')}
           githubLink="https://github.com/OxanaDanilova"
         />
       </div>
