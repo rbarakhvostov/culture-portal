@@ -6,17 +6,17 @@ import uniqid from 'uniqid';
 
 import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
 
-const Searchbox = ({ filter }) => {
+const Result = ({ filter }) => {
   const namespaces = useDirectorsNamespaces();
-  const { t } = useTranslation(namespaces, { useSuspense: false });
+  const { t } = useTranslation(namespaces);
   const results = {};
 
-  namespaces.forEach((namespace, index) => {
-    const director = {
-      [t(`${namespace}:name`)]: namespaces[index],
+  namespaces.forEach((director, index) => {
+    const prop = {
+      [t(`${director}:name`)]: namespaces[index],
     };
 
-    Object.assign(results, director);
+    Object.assign(results, prop);
   });
 
   return (
@@ -36,8 +36,8 @@ const Searchbox = ({ filter }) => {
   );
 };
 
-Searchbox.propTypes = {
+Result.propTypes = {
   filter: PropTypes.string.isRequired,
 };
 
-export default Searchbox;
+export default Result;
