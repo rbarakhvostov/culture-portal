@@ -1,0 +1,56 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 12px auto;
+  width: 750px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 12px auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 350px;
+  text-align: center;
+  font-size: .8em;
+  margin: 9px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20px rgba(24, 24, 34, 0.329);
+}
+/* .card:last-child {
+  margin-bottom: 0;
+} */
+.avatar {
+  /* flex: 0 0 96px; */
+  width: 160px;
+  height: 150px;
+  margin: 0;
+}
+.description {
+ /*  flex: 1;
+  margin-left: 18px; */
+  padding: 12px;
+}
+.name {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.githubAccount {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+.contribution {
+  margin: 0;
+}
+
+.githubLink {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
