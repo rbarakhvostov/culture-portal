@@ -2,11 +2,9 @@ import React, { Suspense } from 'react';
 
 import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
-import Map from '../components/directorpage/Map';
+import Map from '../components/director/Map';
 
-const director = 'alexandrovskaya';
-
-const Director = () => (
+const Director = (director) => (
   <>
     <Header />
     <Sidebar />
