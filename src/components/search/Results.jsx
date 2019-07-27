@@ -1,21 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import uniqid from 'uniqid';
+import { Link } from 'gatsby';
 import { useTranslation } from 'react-i18next';
+import uniqid from 'uniqid';
 
 import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
 
 const Searchbox = ({ filter }) => {
   const namespaces = useDirectorsNamespaces();
-  const { t } = useTranslation(namespaces);
-  const results = namespaces.map((item) => t(`${item}:name`));
+  const { t } = useTranslation(namespaces, { useSuspense: false });
+  const results = {};
+
+  namespaces.forEach((namespace, index) => {
+    const director = {
+      [t(`${namespace}:name`)]: namespaces[index],
+    };
+
+    Object.assign(results, director);
+  });
 
   return (
     <ul>
-      {results
-        .filter((item) => item.toLowerCase().includes(filter.toLowerCase()))
-        .map((item) => (
-          <li key={uniqid()}>{item}</li>
+      {Object.keys(results)
+        .filter((director) =>
+          director.toLowerCase().includes(filter.toLowerCase())
+        )
+        .map((director) => (
+          <li key={uniqid()}>
+            <Link to="/director/" state={{ director: results[director] }}>
+              {director}
+            </Link>
+          </li>
         ))}
     </ul>
   );
