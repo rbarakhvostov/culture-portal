@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto 12px auto;
-  width: 750px;
+  width: 900px;
 }
 
 .container {
@@ -23,18 +23,17 @@
   border: 1px solid #ccc;
   box-shadow: 0 0 20px rgba(24, 24, 34, 0.329);
 }
-/* .card:last-child {
-  margin-bottom: 0;
-} */
+
+.card:hover {
+  box-shadow: 0 0 30px rgba(59, 59, 173, 0.329);
+}
+
 .avatar {
-  /* flex: 0 0 96px; */
   width: 160px;
   height: 150px;
   margin: 0;
 }
 .description {
- /*  flex: 1;
-  margin-left: 18px; */
   padding: 12px;
 }
 .name {
@@ -44,13 +43,26 @@
 
 .githubAccount {
   margin: 0 0 12px 0;
-  padding: 0;
+  font-size: 16px;
+  color: #2B414D;
 }
 .contribution {
-  margin: 0;
+  margin: 0 0 12px 0;
+  font-size: 16px;
 }
 
 .githubLink {
   margin: 0 0 12px 0;
-  padding: 0;
-}
+ }
+
+ .githubLogo {
+  width: 40px;
+  stroke: #2B414D;
+  fill: #2B414D;
+ }
+
+ .githubLogo:hover {
+  stroke: slateblue;
+  fill: slateblue;
+ }
+
