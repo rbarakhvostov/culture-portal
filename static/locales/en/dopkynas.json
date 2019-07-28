@@ -1,4 +1,4 @@
-{	
+{
 	"path": "/dopkynas",
 	"lng": "en",
 	"name": "Vadim Vyacheslavovich Dopkynas",
@@ -7,7 +7,14 @@
 	"description": "Belarusian theatrical figure, author of the first production in the professional theater of the play by Alexander Vampilov",
 	"img": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Vadzim_Dapkiunas_%281%29.jpg",
 	"video": "https://www.youtube.com/watch?v=1k5iU5m1Uf0",
-	"mapData": [1111, 1111],
+	"mapData": [
+		{
+			"coords": [
+				[53.900766, 27.562627]
+			],
+			"title": "Janka Kupala National Theatre"
+		}
+	],
 	"bio": [
 		{
 			"date": "1940",
@@ -52,54 +59,54 @@
 		{
 			"date": "2007-2009",
 			"description": "Head of the literary and dramatic part and assistant art director of the Yanka Kupala Academic Theater."
-		},
+		}
 	],
 	"work": [
-		{	
+		{
 			"date": "1966",
 			"product": {
 				"title": "June farewell",
-				"author": "A. Vampilov",
+				"author": "A. Vampilov"
 			},
-			"role": "Producer",
+			"role": "Producer"
 		},
-		{	
+		{
 			"date": "1974",
 			"product": {
 				"title": "Great standoff",
-				"author": "Yu.Dubrovin",
+				"author": "Yu.Dubrovin"
 			},
-			"role": "German soldier",
+			"role": "German soldier"
 		},
 		{
 			"date": "1978",
 			"product": {
 				"title": "Let's talk brother",
-				"author": "Y. Chulyukin",
+				"author": "Y. Chulyukin"
 			},
-			"role": "Episode",
+			"role": "Episode"
 		},
-		{	
+		{
 			"date": "1982",
 			"product": {
 				"title": "State border",
-				"author": "A. Nagorny, G. Ryabov",
+				"author": "A. Nagorny, G. Ryabov"
 			},
-			"role": "Episode",
+			"role": "Episode"
 		},
-		{	
+		{
 			"date": "2014",
 			"product": {
 				"title": "Outgoing person",
-				"author": "N. Lyrchikov",
+				"author": "N. Lyrchikov"
 			},
-			"role": "Central Committee member",
-		},
+			"role": "Central Committee member"
+		}
 	],
 	"images": [
-		"https://www.kino-teatr.ru/acter/album/268177/380617.jpg", 
-		"https://www.kino-teatr.ru/acter/album/268177/582956.jpg", 
+		"https://www.kino-teatr.ru/acter/album/268177/380617.jpg",
+		"https://www.kino-teatr.ru/acter/album/268177/582956.jpg",
 		"https://www.kino-teatr.ru/acter/album/268177/583344.jpg",
-		"https://www.kino-teatr.ru/acter/album/268177/657067.jpg",
-	],
+		"https://www.kino-teatr.ru/acter/album/268177/657067.jpg"
+	]
 }

@@ -1,4 +1,4 @@
-{	
+{
 	"path": "/dopkynas",
 	"lng": "ru",
 	"name": "Вадим Вячеславович Допкюнас",
@@ -7,7 +7,14 @@
 	"description": "Белорусский театральный деятель и организатор театрального дела, автор первой постановки в профессиональном театре пьесы Александра Вампилова",
 	"img": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Vadzim_Dapkiunas_%281%29.jpg",
 	"video": "https://www.youtube.com/watch?v=1k5iU5m1Uf0",
-	"mapData": [1111, 1111],
+	"mapData": [
+		{
+			"coords": [
+				[53.900766, 27.562627]
+			],
+			"title": "Нацыянальны акадэмічны тэатр імя Янкі Купалы"
+		}
+	],
 	"bio": [
 		{
 			"date": "1940",
@@ -52,54 +59,54 @@
 		{
 			"date": "2007-2009",
 			"description": "Руководитель литературно-драматической части и помощник художественного руководителя Национального академического театра имени Янки Купалы."
-		},
+		}
 	],
 	"work": [
-		{	
+		{
 			"date": "1966",
 			"product": {
 				"title": "Прощание в июне",
-				"author": "А. Вампилов",
+				"author": "А. Вампилов"
 			},
-			"role": "Режиссёр",
+			"role": "Режиссёр"
 		},
-		{	
+		{
 			"date": "1974",
 			"product": {
 				"title": "Великое противостояние",
-				"author": "Ю.Дубровин",
+				"author": "Ю.Дубровин"
 			},
-			"role": "Немецкий солдат",
+			"role": "Немецкий солдат"
 		},
 		{
 			"date": "1978",
 			"product": {
 				"title": "Поговорим, брат",
-				"author": "Ю.Чулюкин",
+				"author": "Ю.Чулюкин"
 			},
-			"role": "эпизод",
+			"role": "эпизод"
 		},
-		{	
+		{
 			"date": "1982",
 			"product": {
 				"title": "Государственная граница",
-				"author": "А. Нагорный, Г.Рябов",
+				"author": "А. Нагорный, Г.Рябов"
 			},
-			"role": "эпизод",
+			"role": "эпизод"
 		},
-		{	
+		{
 			"date": "2014",
 			"product": {
 				"title": "Уходящая натура",
-				"author": "Н. Лырчиков",
+				"author": "Н. Лырчиков"
 			},
-			"role": "Член ЦК",
-		},
+			"role": "Член ЦК"
+		}
 	],
 	"images": [
-		"https://www.kino-teatr.ru/acter/album/268177/380617.jpg", 
-		"https://www.kino-teatr.ru/acter/album/268177/582956.jpg", 
+		"https://www.kino-teatr.ru/acter/album/268177/380617.jpg",
+		"https://www.kino-teatr.ru/acter/album/268177/582956.jpg",
 		"https://www.kino-teatr.ru/acter/album/268177/583344.jpg",
-		"https://www.kino-teatr.ru/acter/album/268177/657067.jpg",
-	],
+		"https://www.kino-teatr.ru/acter/album/268177/657067.jpg"
+	]
 }
