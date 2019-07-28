@@ -18,9 +18,13 @@ const Director = ({ location }) => {
 };
 
 const DirectorWrapper = ({ location }) => (
-  <Suspense fallback="loading">
-    <Director location={location} />
-  </Suspense>
+  <>
+    {typeof window !== 'undefined' && (
+      <Suspense fallback="loading">
+        <Director location={location} />
+      </Suspense>
+    )}
+  </>
 );
 
 Director.propTypes = {
