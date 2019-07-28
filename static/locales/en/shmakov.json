@@ -6,7 +6,12 @@
   "city": "Vitebsk",
   "description": "Belarusian actor, director. People's Artist of Belarus, People’s Artist of the USSR.",
   "video": "https://www.youtube.com/watch?v=WckdzuNpPTU",
-  "mapData": [1111, 1111],
+  "mapData": [
+    {
+      "coords": [[55.193412, 30.20148]],
+      "title": "The Yakub Kolas National Academic Drama Theatre"
+    }
+  ],
   "bio": [
     {
       "date": "1917",
