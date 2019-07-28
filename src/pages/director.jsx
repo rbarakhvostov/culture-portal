@@ -5,6 +5,7 @@ import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
 import Map from '../components/director/Map';
 import Video from '../components/director/Video';
+import Gallery from '../components/director/Gallery';
 import DirectorStyle from '../styles/director.module.css';
 import '../styles/global.css';
 
@@ -17,6 +18,7 @@ const Director = ({ location }) => {
       <Sidebar />
       <Video director={director} />
       <Map director={director} />
+      <Gallery director={director} />
     </div>
   );
 };
