@@ -11,9 +11,13 @@ const Director = () => (
 );
 
 const DirectorWrapper = () => (
-  <Suspense fallback="loading">
-    <Director />
-  </Suspense>
+  <>
+    {typeof window !== 'undefined' && (
+      <Suspense fallback="loading">
+        <Director />
+      </Suspense>
+    )}
+  </>
 );
 
 export default DirectorWrapper;

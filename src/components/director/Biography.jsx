@@ -9,10 +9,17 @@ function getBiography(data) {
     <TimelineItem
       key={uniqid()}
       dateText={item.date}
+      style={{ color: 'rgb(10, 7, 7)' }}
       dateInnerStyle={{
-        background: `#${(0x1000000 + Math.random() * 0xffffff)
-          .toString(16)
-          .substr(1, 6)}`,
+        background:
+          'linear-gradient(45deg, rgb(116, 99, 99) 30%, rgb(10, 7, 7) 90%)',
+        color: '#ffffff',
+        fontSize: '1.2rem',
+      }}
+      bodyContainerStyle={{
+        padding: '10px',
+        borderRadius: '8px',
+        boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
       }}
     >
       <p>{item.description}</p>
