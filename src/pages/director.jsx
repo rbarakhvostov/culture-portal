@@ -1,19 +1,40 @@
 import React, { Suspense } from 'react';
+import PropTypes from 'prop-types';
 
 import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
+import Map from '../components/director/Map';
+import WorksList from '../components/director/WorksList';
 
-const Director = () => (
+const Director = ({ location }) => {
+  const { director } = location.state ? location.state : null;
+
+  return (
+    <>
+      <Header />
+      <Sidebar />
+      <WorksList director={director} />
+      {Map(director)}
+    </>
+  );
+};
+
+const DirectorWrapper = ({ location }) => (
   <>
-    <Header />
-    <Sidebar />
+    {typeof window !== 'undefined' && (
+      <Suspense fallback="loading">
+        <Director location={location} />
+      </Suspense>
+    )}
   </>
 );
 
-const DirectorWrapper = () => (
-  <Suspense fallback="loading">
-    <Director />
-  </Suspense>
-);
+Director.propTypes = {
+  location: PropTypes.objectOf(PropTypes.any).isRequired,
+};
+
+DirectorWrapper.propTypes = {
+  location: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default DirectorWrapper;
