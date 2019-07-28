@@ -1,10 +1,32 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// import { useTranslation } from 'react-i18next';
-// import uniqid from 'uniqid';
+import React, { useState } from 'react';
+import ModalVideo from 'react-modal-video';
 
-// const Video = () => {
+import { useTranslation } from 'react-i18next';
+import videoStyle from './video.module.css';
+import './video.css';
 
-// }
+const Video = ({ director }) => {
+  const { t } = useTranslation([director,'layout']);
 
-// export default Video;
+  const [isOpen, openModal] = useState(false);
+
+  return (
+    <div className={videoStyle.video}>
+      <button
+        className={videoStyle.videoButton}
+        onClick={() => openModal(!isOpen)}
+      >
+        {t('layout:video_button')}
+      </button>
+      <ModalVideo
+        isOpen={isOpen}
+        onClose={() => openModal(!isOpen)}
+        channel='youtube'
+        videoId={t('video')}
+      >
+      </ModalVideo>
+    </div>
+  )
+}
+
+export default Video;
