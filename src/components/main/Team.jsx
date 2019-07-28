@@ -10,7 +10,7 @@ const Card = (props) => (
       <h2 className={styles.githubAccount}>{props.githubAccount}</h2>
       <a href={props.githubLink} className={styles.githubLink}>
         <svg
-                    className={styles.githubLogo}
+          className={styles.githubLogo}
           version="1.1"
           id="Layer_1"
           x="0px"
@@ -58,12 +58,11 @@ export default () => {
         <Card
           avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
           name={t('fourth_dev_name')}
-          githubAccount="Github account4"
+          githubAccount="wofec"
           contribution={t('fourth_dev_contribution')}
-          githubLink="/link.html"
+          githubLink="https://github.com/wofec"
         />
-         </div>
+      </div>
     </div>
   );
 };
-

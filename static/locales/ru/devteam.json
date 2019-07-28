@@ -1,0 +1,26 @@
+{
+  "header": "Команда разработчиков",
+  "contribution_header": "Вклад",
+  "members": [
+    {
+      "name": "Мамонтов Влад",
+      "git": "vld-m",
+      "contribution": []
+    },
+    {
+      "name": "Роман Барахвостов",
+      "git": "rbarakhvostov",
+      "contribution": []
+    },
+    {
+      "name": "Кузнецова Светлана",
+      "git": "SvetlankaKuzyaka",
+      "contribution": []
+    },
+    {
+      "name": "Довляш Антон",
+      "git": "wofec",
+      "contribution": []
+    }
+  ]
+}

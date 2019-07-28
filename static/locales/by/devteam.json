@@ -1,0 +1,26 @@
+{
+  "header": "Каманда распрацоўшчыкаў",
+  "contribution_header": "Уклад",
+  "members": [
+    {
+      "name": "Мамантаў Улад",
+      "git": "vld-m",
+      "contribution": []
+    },
+    {
+      "name": "Раман Барахвостау́",
+      "git": "rbarakhvostov",
+      "contribution": []
+    },
+    {
+      "name": "Кузняцова Святлана",
+      "git": "SvetlankaKuzyaka",
+      "contribution": []
+    },
+    {
+      "name": "Даўляш Антон",
+      "git": "wofec",
+      "contribution": []
+    }
+  ]
+}

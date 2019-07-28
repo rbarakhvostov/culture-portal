@@ -14,6 +14,9 @@ const Navigation = () => {
         <li>
           <Link to="/search/">{t('link_search')}</Link>
         </li>
+        <li>
+          <Link to="/search/">{t('link_search')}</Link>
+        </li>
       </ul>
     </nav>
   );
