@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import styles from './developerDay.module.css';
 
 const DeveloperDay = ({ director }) => {
-  const { t } = useTranslation(director);
+  const { t } = useTranslation([director, 'layout']);
   return (
     <div className={styles.authorBlock}>
-      <h2 className={styles.blockTitle}>Author of the Day</h2>
+      <h2 className={styles.blockTitle}>{t('layout:title-author-block')}</h2>
       <h3 className={styles.authorName}>{t('name')}</h3>
       <h4 className={styles.authorDate}>{t('date')}</h4>
       <p className={styles.authorDescr}>{t('description')}</p>
@@ -19,7 +19,7 @@ const DeveloperDay = ({ director }) => {
         width="188"
       />
       <a className={styles.blockButton} href="google.com">
-        go
+        {t('layout:button-author-block')}
       </a>
     </div>
   );
