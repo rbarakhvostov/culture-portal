@@ -6,13 +6,13 @@ import uniqid from 'uniqid';
 import mapStyle from './map.module.css';
 
 const mapState = ({ coords }) => ({
-  center: coords[0],
+  center: coords,
   zoom: 17,
 });
 
 const generatePlacemark = ({ coords, title }) => {
   const props = {
-    geometry: coords[0],
+    geometry: coords,
     properties: {
       hintContent: title,
     },
@@ -23,7 +23,7 @@ const generatePlacemark = ({ coords, title }) => {
   return <Placemark {...props} key={uniqid()} />;
 };
 
-const Map = (director) => {
+const Map = ({ director }) => {
   const { t } = useTranslation(director);
 
   const lng = t('lng') === 'en' ? 'en' : 'ru';
@@ -35,6 +35,10 @@ const Map = (director) => {
       </YMap>
     </YMaps>
   );
+};
+
+Map.propTypes = {
+  director: PropTypes.string.isRequired,
 };
 
 mapState.propTypes = {

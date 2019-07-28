@@ -4,23 +4,31 @@ import PropTypes from 'prop-types';
 import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
 import Map from '../components/director/Map';
+import Video from '../components/director/Video';
+import DirectorStyle from '../styles/director.module.css';
+import '../styles/global.css';
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
 
   return (
-    <>
+    <div className={DirectorStyle.wrapper}>
       <Header />
       <Sidebar />
-      {Map(director)}
-    </>
+      <Video director={director} />
+      <Map director={director} />
+    </div>
   );
 };
 
 const DirectorWrapper = ({ location }) => (
-  <Suspense fallback="loading">
-    <Director location={location} />
-  </Suspense>
+  <>
+    {typeof window !== 'undefined' && (
+      <Suspense fallback="loading">
+        <Director location={location} />
+      </Suspense>
+    )}
+  </>
 );
 
 Director.propTypes = {

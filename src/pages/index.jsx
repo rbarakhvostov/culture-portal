@@ -10,9 +10,13 @@ const Main = () => (
 );
 
 const MainWrapper = () => (
-  <Suspense fallback="loading">
-    <Main />
-  </Suspense>
+  <>
+    {typeof window !== 'undefined' && (
+      <Suspense fallback="loading">
+        <Main />
+      </Suspense>
+    )}
+  </>
 );
 
 export default MainWrapper;
