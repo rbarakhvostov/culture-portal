@@ -1,20 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import styles from './developerDay.css';
+import styles from './developerDay.module.css';
 
 const DeveloperDay = ({ director }) => {
   const { t } = useTranslation(director);
-  // const info = ['Режиссёр Дня'];
-  // info.push(t('name'), t('date'), t('description'));
   return (
-    <div className={styles.authorDayBlock}>
-      <h2>Author of the Day</h2>
-      <h3>{t('name')}</h3>
-      <h4>{t('date')}</h4>
-      <p>{t('description')}</p>
-      <img src={t('img')} alt="author of the day" />
-      <a href="google.com">go</a>
+    <div className={styles.authorBlock}>
+      <h2 className={styles.blockTitle}>Author of the Day</h2>
+      <h3 className={styles.authorName}>{t('name')}</h3>
+      <h4 className={styles.authorDate}>{t('date')}</h4>
+      <p className={styles.authorDescr}>{t('description')}</p>
+      <img
+        className={styles.authorImg}
+        src={t('img')}
+        alt="author of the day"
+        height="250"
+        width="188"
+      />
+      <a className={styles.blockButton} href="google.com">
+        go
+      </a>
     </div>
   );
 };
