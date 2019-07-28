@@ -1,26 +1,26 @@
 {
-  "header": "The Development team",
+  "header": "The Development Team",
   "contribution_header": "Contribution",
   "members": [
     {
       "name": "Mamontov Vlad",
       "git": "vld-m",
-      "contribution": []
+      "contribution": ["contribution", "contribution"]
     },
     {
       "name": "Roman Barakhvostov",
       "git": "rbarakhvostov",
-      "contribution": []
+      "contribution": ["contribution", "contribution"]
     },
     {
       "name": "Kuznetsova Svetlana",
       "git": "SvetlankaKuzyaka",
-      "contribution": []
+      "contribution": ["contribution", "contribution"]
     },
     {
       "name": "Dauliash Anton",
       "git": "wofec",
-      "contribution": []
+      "contribution": ["contribution", "contribution"]
     }
   ]
 }
