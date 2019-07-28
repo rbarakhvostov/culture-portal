@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
 import { useTranslation } from 'react-i18next';
 import mapStyle from './map.module.css';
@@ -8,33 +9,40 @@ const mapState = ({ coords }) => ({
   zoom: 16,
 });
 
-const getPlaceMarksProps = (arr) =>
-  arr.map(({ coords, title }) => ({
+const generatePlacemark = ({ coords, title }) => {
+  const props = {
     geometry: coords[0],
     properties: {
       hintContent: title,
     },
 
     modules: ['geoObject.addon.hint'],
-  }));
+  };
+
+  return <Placemark {...props} />;
+};
 
 const Map = (director) => {
   const { t } = useTranslation(director);
-  const currentMapState = mapState(t('mapData')[0]);
-
-  const placeMarksProps = getPlaceMarksProps(t('mapData'));
 
   const lng = t('lng') === 'en' ? 'en' : 'ru';
 
   return (
-    <YMaps className="hellow" query={{ lang: lng }}>
-      <YMap className={mapStyle.map} state={currentMapState}>
-        {placeMarksProps.map((props) => (
-          <Placemark {...props} />
-        ))}
+    <YMaps query={{ lang: lng }}>
+      <YMap className={mapStyle.map} state={mapState(t('mapData')[0])}>
+        {t('mapData').map((item) => generatePlacemark(item))}
       </YMap>
     </YMaps>
   );
+};
+
+mapState.propTypes = {
+  coords: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
+
+generatePlacemark.propTypes = {
+  coords: PropTypes.arrayOf(PropTypes.number).isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Map;
