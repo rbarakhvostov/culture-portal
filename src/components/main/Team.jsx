@@ -62,37 +62,8 @@ export default () => {
           contribution={t('fourth_dev_contribution')}
           githubLink="/link.html"
         />
-        <Card
-          avatar="https://avatars3.githubusercontent.com/u/47994020?s=460&v=4"
-          name={t('fifth_dev_name')}
-          githubAccount="OxanaDanilova"
-          contribution={t('fifth_dev_contribution')}
-          githubLink="https://github.com/OxanaDanilova"
-        />
-      </div>
-    </div>
-  );
-};
-/* const Card = props => {
-  const { t } = useTranslation('team');
-   */
-
-/*   return (
-    <div>
-      <h1></h1>
-      <ul>
-        <li>
-          <h3></h3>
-          <p></p>
-          <a href=>
-            <img src="./images/githubAccount.jpg" alt="githubAccountLink" />
-          </a>
-        </li>
-      </ul>
+         </div>
     </div>
   );
 };
 
-export default Team; */
-
-/* ReactDOM.render(<TeamDescription />, document.getElementById('app')); */

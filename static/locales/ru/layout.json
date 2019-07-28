@@ -7,10 +7,8 @@
   "second_dev_name": "Имя 2",
   "third_dev_name": "Мамонтов Влад",
   "fourth_dev_name": "Имя 4",
-  "fifth_dev_name": "Данилова Оксана",
   "first_dev_contribution": "Вклад 1",
   "second_dev_contribution": "Вклад 2",
   "third_dev_contribution": "Вклад 3",
-  "fourth_dev_contribution": "Вклад 4",
-  "fifth_dev_contribution": "Вклад 5"
+  "fourth_dev_contribution": "Вклад 4"
 }
