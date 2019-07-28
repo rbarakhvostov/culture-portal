@@ -6,8 +6,7 @@ import Sidebar from '../components/layout/Sidebar';
 import Map from '../components/director/Map';
 
 const Director = ({ location }) => {
-  console.log(location);
-  const director = location.state ? location.state.director : null;
+  const { director } = location.state ? location.state : null;
 
   return (
     <>
@@ -18,13 +17,17 @@ const Director = ({ location }) => {
   );
 };
 
-const DirectorWrapper = () => (
+const DirectorWrapper = ({ location }) => (
   <Suspense fallback="loading">
-    <Director />
+    <Director location={location} />
   </Suspense>
 );
 
 Director.propTypes = {
+  location: PropTypes.objectOf(PropTypes.any).isRequired,
+};
+
+DirectorWrapper.propTypes = {
   location: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
