@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
 import { useTranslation } from 'react-i18next';
+import uniqid from 'uniqid';
 import mapStyle from './map.module.css';
 
 const mapState = ({ coords }) => ({
   center: coords[0],
-  zoom: 16,
+  zoom: 17,
 });
 
 const generatePlacemark = ({ coords, title }) => {
@@ -19,7 +20,7 @@ const generatePlacemark = ({ coords, title }) => {
     modules: ['geoObject.addon.hint'],
   };
 
-  return <Placemark {...props} />;
+  return <Placemark {...props} key={uniqid()} />;
 };
 
 const Map = (director) => {
