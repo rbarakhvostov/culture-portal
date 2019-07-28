@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import ModalVideo from 'react-modal-video';
 
 import { useTranslation } from 'react-i18next';
@@ -6,13 +7,14 @@ import videoStyle from './video.module.css';
 import './video.css';
 
 const Video = ({ director }) => {
-  const { t } = useTranslation([director,'layout']);
+  const { t } = useTranslation([director, 'layout']);
 
   const [isOpen, openModal] = useState(false);
 
   return (
     <div className={videoStyle.video}>
       <button
+        type="button"
         className={videoStyle.videoButton}
         onClick={() => openModal(!isOpen)}
       >
@@ -21,12 +23,15 @@ const Video = ({ director }) => {
       <ModalVideo
         isOpen={isOpen}
         onClose={() => openModal(!isOpen)}
-        channel='youtube'
+        channel="youtube"
         videoId={t('video')}
-      >
-      </ModalVideo>
+      />
     </div>
-  )
-}
+  );
+};
+
+Video.propTypes = {
+  director: PropTypes.string.isRequired,
+};
 
 export default Video;

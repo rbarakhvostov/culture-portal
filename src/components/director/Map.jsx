@@ -37,6 +37,10 @@ const Map = ({ director }) => {
   );
 };
 
+Map.propTypes = {
+  director: PropTypes.string.isRequired,
+};
+
 mapState.propTypes = {
   coords: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
