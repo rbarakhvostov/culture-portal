@@ -1,0 +1,103 @@
+{	
+	"path": "/mirovich",
+	"lng": "en",
+	"name": "Evstigney Afinogenovich Mirovich",
+	"date": "10 august 1878 - 25 february 1952",
+	"birthplace": "St. Petersburg (Russian Empire)",
+	"description": "Russian and Belarusian Soviet actor, director, playwright, teacher, professor (1945). People's Artist of the Byelorussian SSR (1940). One of the founders of the Belarusian theater art and the Belarusian Yanka Kupala Theater",
+	"img": "https://clck.ru/HFu6C",
+	"video": "https://www.youtube.com/watch?v=NTZxbKRxA64&t=33s",
+	"mapData": [
+		{
+			"coords": [53.898433, 27.563935],
+			"title": "Belarusian State Academic Theater of the Young Spectator"
+    }
+	],
+	"bio": [
+		{
+			"date": "1878",
+			"description": "He was born on August the 10th, 1878 in St. Petersburg, Russian Empire"
+		},
+		{
+			"date": "1900",
+			"description": "He began his professional stage work in St. Petersburg as an actor and director. Played in the Admiralty, Ekaterininsky, Kronstadt theaters"
+		},
+		{
+			"date": "1906",
+			"description": "He became a member of the St. Petersburg Union of Dramatic and Musical Writers"
+		},
+		{
+			"date": "1917",
+			"description": "He moved to Minsk"
+		},
+		{
+			"date": "1921-1931",
+			"description": "He was the artistic director of the 1st Belarusian State Drama Theater in Minsk (now the Yanka Kupala National Academic Theater)"
+		},
+		{
+			"date": "1932—1935",
+			"description": "He was the artistic director of the Gomel Theater of Working Youth, which in 1935 he reorganized into the first collective-state-farm theater in the republic"
+		},
+		{
+			"date": "1937—1940 ",
+			"description": "He was the artistic director of the Belarusian Theater for Young Spectators named after N. Krupskaya"
+		},
+		{
+			"date": "1941—1945",
+			"description": "He was the director of the 1st Byelorussian State Drama Theater in Minsk (now the Yanka Kupala National Academic Theater)"
+		},
+		{
+			"date": "1945",
+			"description": "He was artistic director and head of the department of actor's skill at the Belarusian Theater and Art Institute"
+		}
+	],
+	"work": [
+		{	
+			"date": "1923",
+			"product": {
+				"title": "Kastus Kalinovsky",
+				"author": "E. A. Mirovich"
+			},
+			"role": "author, director"
+		},
+		{	
+			"date": "1927",
+			"product": {
+				"title": "Rebellion",
+				"author": "D. A. Furmanov"
+			},
+			"role": "director"
+		},
+		{	
+			"date": "1929",
+			"product": {
+				"title": "Bridge",
+				"author": "E. S. Romanovich"
+			},
+			"role": "director"
+		},
+		{
+			"date": "1937",
+			"product": {
+				"title": "How the Steel Was Tempered",
+				"author": "N. A. Ostrovsky"
+			},
+			"role": "director"
+		},
+		{	
+			"date": "1939",
+			"product": {
+				"title": "Wonderful pipe",
+				"author": "Russian folktale"
+			},
+			"role": "director"
+		}
+	],
+	"images": [
+		"https://clck.ru/HL5TG", 
+		"https://clck.ru/HL5Us", 
+		"https://clck.ru/HL5Vg",
+		"https://clck.ru/HL5XF",
+		"https://clck.ru/HL5Zy"
+	]
+}
