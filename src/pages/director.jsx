@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
+import Biography from '../components/director/Biography';
 import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
@@ -16,9 +17,10 @@ const Director = ({ location }) => {
       <Header />
       <Sidebar />
       <Overview director={director} />
+      <Biography director={director} />
+      <Gallery director={director} />
       <Video director={director} />
       <Map director={director} />
-      <Gallery director={director} />
     </>
   );
 };
