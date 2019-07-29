@@ -6,6 +6,7 @@ import Sidebar from '../components/layout/Sidebar';
 import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
+import Overview from '../components/director/overview/Overview';
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
@@ -14,9 +15,10 @@ const Director = ({ location }) => {
     <>
       <Header />
       <Sidebar />
+      <Overview director={director} />
+      <Video director={director} />
       <Map director={director} />
       <Gallery director={director} />
-      <Video director={director} />
     </>
   );
 };
