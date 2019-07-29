@@ -20,7 +20,6 @@ const Result = ({ filter }) => {
     };
 
     Object.assign(results, prop);
-    console.log(results);
   });
   return (
     <ul className={ResultsStyles.results}>
@@ -30,9 +29,9 @@ const Result = ({ filter }) => {
         )
         .map((director) => (
           <li className={ResultsStyles.listItem} key={uniqid()}>
-            <Link 
-              className={ResultsStyles.link} 
-              to="/director/" 
+            <Link
+              className={ResultsStyles.link}
+              to="/director/"
               state={{ director: results[director] }}
             >
               <Overview director={results[director]} />
