@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import uniqid from 'uniqid';
 import PropTypes from 'prop-types';
 
-function getBiography(data) {
+const getBiography = (data) => {
   return data.map((item) => (
     <TimelineItem
       key={uniqid()}
@@ -25,7 +25,7 @@ function getBiography(data) {
       <p>{item.description}</p>
     </TimelineItem>
   ));
-}
+};
 
 const Biography = ({ director }) => {
   const { t } = useTranslation(director);
