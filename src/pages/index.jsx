@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 
-import '../utils/i18n';
 import Header from '../components/layout/Header';
 import Team from '../components/devteam/Team';
 
@@ -12,9 +11,13 @@ const Main = () => (
 );
 
 const MainWrapper = () => (
-  <Suspense fallback="loading">
-    <Main />
-  </Suspense>
+  <>
+    {typeof window !== 'undefined' && (
+      <Suspense fallback="loading">
+        <Main />
+      </Suspense>
+    )}
+  </>
 );
 
 export default MainWrapper;

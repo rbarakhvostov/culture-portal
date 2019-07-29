@@ -17,9 +17,13 @@ const Search = () => {
 };
 
 const SearchWrapper = () => (
-  <Suspense fallback="loading">
-    <Search />
-  </Suspense>
+  <>
+    {typeof window !== 'undefined' && (
+      <Suspense fallback="loading">
+        <Search />
+      </Suspense>
+    )}
+  </>
 );
 
 export default SearchWrapper;
