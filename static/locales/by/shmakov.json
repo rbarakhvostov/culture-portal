@@ -5,13 +5,14 @@
   "date": "1 сакавіка  1917 - 1 мая 2009",
   "city": "Віцебск",
   "description": "Беларускі акцёр, рэжысёр. Народны артыст Беларусі. Народны артыст СССР.",
+  "img": "https://www.sb.by/upload/medialibrary/fad/fadc415520895b8cfdd9fa06a44e4251.jpg",
   "video": "WckdzuNpPTU",
   "mapData": [
     {
-      "coords": [55.193412, 30.201480],
+      "coords": [55.193412, 30.20148],
       "title": "Нацыянальны акадэмічны драматычны тэатр імя Якуба Коласа"
     }
-],
+  ],
   "bio": [
     {
       "date": "1917",
@@ -67,5 +68,12 @@
       },
       "role": "Рэжысёр"
     }
+  ],
+  "images": [
+    "https://www.kino-teatr.ru/acter/album/9703/515992.jpg",
+    "https://www.kino-teatr.ru/acter/album/9703/929953.jpg",
+    "https://www.kino-teatr.ru/acter/album/9703/562561.jpg",
+    "https://www.kino-teatr.ru/acter/album/9703/681767.jpg",
+    "https://www.kino-teatr.ru/acter/album/9703/63402.jpg"
   ]
 }
