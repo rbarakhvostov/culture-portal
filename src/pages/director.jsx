@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
 import Map from '../components/director/map/Map';
-import Video from '../components/director/video/Video';
 import Gallery from '../components/director/gallery/Gallery';
+import Video from '../components/director/video/Video';
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
