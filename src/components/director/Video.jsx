@@ -9,20 +9,20 @@ import './video.css';
 const Video = ({ director }) => {
   const { t } = useTranslation([director, 'layout']);
 
-  const [isOpen, openModal] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={videoStyle.video}>
       <button
         type="button"
         className={videoStyle.videoButton}
-        onClick={() => openModal(!isOpen)}
+        onClick={() => setIsOpen(!isOpen)}
       >
         {t('layout:video_button')}
       </button>
       <ModalVideo
         isOpen={isOpen}
-        onClose={() => openModal(!isOpen)}
+        onClose={() => setIsOpen(!isOpen)}
         channel="youtube"
         videoId={t('video')}
       />
