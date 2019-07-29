@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react';
 
 import Header from '../components/layout/Header';
-import DeveloperDay from '../components/developerDay/developerDay';
+import DirectorOfTheDay from '../components/directorOfTheDay/DirectorOfTheDay';
 
 const Main = () => (
   <>
     <Header />
-    <DeveloperDay />
+    <DirectorOfTheDay />
   </>
 );
 

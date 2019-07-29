@@ -2,9 +2,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby';
 import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
-import styles from './developerDay.module.css';
+import styles from './directorOfTheDay.module.css';
 
-const DeveloperDay = () => {
+const DirectorOfTheDay = () => {
   let author;
   const day = new Date();
   const namespaces = useDirectorsNamespaces();
@@ -38,4 +38,4 @@ const DeveloperDay = () => {
   );
 };
 
-export default DeveloperDay;
+export default DirectorOfTheDay;
