@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import uniqid from 'uniqid';
 
-import 'react-responsive-carousel/lib/styles/carousel.css';
+import './carousel.css';
 import { Carousel } from 'react-responsive-carousel';
 import CarouselStyles from './gallery.module.css';
 
