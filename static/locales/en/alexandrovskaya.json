@@ -12,89 +12,89 @@
 			"coords": [53.910369, 27.561779],
 			"title": "Bolshoi Opera and Ballet Theatre"
     }
-	],
-	"bio": [
-		{
-			"date": "1904",
-			"description": "She was born on 15 February, 1904 in Minsk."
-		},
-		{
-			"date": "1920",
-			"description": "Began to act as a singer in 1920 in the troupe of the theater Glavpolitprosvet of the Western Front."
-		},
-		{
-			"date": "1924-1928",
-			"description": "She studied at the Minsk Musical Technical School, in 1928 - in a special opera class."
-		},
-		{
-			"date": "1927",
-			"description": "She performed Belarusian folk songs at the International Music Fair in Frankfurt am Main (Germany)."
-		},
-		{
-			"date": "1930-1933",
-			"description": "She studied at the State Studio of Opera and Ballet (Minsk). Pupil V. A. Tsvetkov and A. P. Bonachich."
-		},
-		{
-			"date": "1933",
-			"description": "Soloist of the Belarusian Opera and Ballet Theater in Minsk. She performed both soprano and mezzo-soprano parts."
-		},
-		{
-			"date": "1951—1960",
-			"description": "She was the chief director of the Belarusian Opera and Ballet Theater."
-		},
-		{
-			"date": "1946—1980",
-			"description": "She was the initiator of the creation and the permanent chairman of the Belarusian Theater Society. Honorary Chairman since 1976."
-		}
-	],
-	"work": [
-		{
-			"date": "1939",
-			"product": {
-				"title": "Mikhas Podgorny",
-				"author": "Е. К. Tikotsky"
-			},
-			"role": "Opera role - Marysya"
-		},
-		{
-			"date": "1939",
-			"product": {
-				"title": "Eugene Onegin",
-				"author": "P. I. Tchaikovsky"
-			},
-			"role": "Opera role - Tatiana"
-		},
-		{
-			"date": "1951",
-			"product": {
-				"title": "Zaporozhets za Dunayem",
-				"author": "S. S. Gulak Artemovsky"
-			},
-			"role": "Director"
-		},
-		{
-			"date": "1952",
-			"product": {
-				"title": "Rusalka",
-				"author": "А. S. Dargomyzhsky"
-			},
-			"role": "Director"
-		},
-		{
-			"date": "1960",
-			"product": {
-				"title": "Queen of spades",
-				"author": "P. I. Tchaikovsky"
-			},
-			"role": "Director"
-		}
-	],
-	"images": [
-		"https://www.sb.by/upload/medialibrary/d3f/d3fe6cd9626ee82429a5b1d8d1fe2578.jpg",
-		"https://www.sb.by/upload/medialibrary/ddb/ddbf09bc5aa9a7039330b6ebe8505522.jpg",
-		"https://www.sb.by/upload/medialibrary/2a2/2a2ec6c4e359ec06d95f5247c8c29e6e.jpg",
-		"https://www.sb.by/upload/medialibrary/d76/d769a003a660176919b2a5cb8fa96cb6.jpg",
-		"https://www.sb.by/upload/medialibrary/377/3775af02273a590150a1e89012960225.jpg",
-		"https://www.sb.by/upload/medialibrary/bc0/bc0db9c1de606f95be2f9cbab1d362fa.jpg"
-	]
+  ],
+  "bio": [
+    {
+      "date": "1904",
+      "description": "She was born on 15 February, 1904 in Minsk."
+    },
+    {
+      "date": "1920",
+      "description": "Began to act as a singer in 1920 in the troupe of the theater Glavpolitprosvet of the Western Front."
+    },
+    {
+      "date": "1924-1928",
+      "description": "She studied at the Minsk Musical Technical School, in 1928 - in a special opera class."
+    },
+    {
+      "date": "1927",
+      "description": "She performed Belarusian folk songs at the International Music Fair in Frankfurt am Main (Germany)."
+    },
+    {
+      "date": "1930-1933",
+      "description": "She studied at the State Studio of Opera and Ballet (Minsk). Pupil V. A. Tsvetkov and A. P. Bonachich."
+    },
+    {
+      "date": "1933",
+      "description": "Soloist of the Belarusian Opera and Ballet Theater in Minsk. She performed both soprano and mezzo-soprano parts."
+    },
+    {
+      "date": "1951—1960",
+      "description": "She was the chief director of the Belarusian Opera and Ballet Theater."
+    },
+    {
+      "date": "1946—1980",
+      "description": "She was the initiator of the creation and the permanent chairman of the Belarusian Theater Society. Honorary Chairman since 1976."
+    }
+  ],
+  "work": [
+    {
+      "date": "1939",
+      "product": {
+        "title": "Mikhas Podgorny",
+        "author": "Е. К. Tikotsky"
+      },
+      "role": "Opera role - Marysya"
+    },
+    {
+      "date": "1939",
+      "product": {
+        "title": "Eugene Onegin",
+        "author": "P. I. Tchaikovsky"
+      },
+      "role": "Opera role - Tatiana"
+    },
+    {
+      "date": "1951",
+      "product": {
+        "title": "Zaporozhets za Dunayem",
+        "author": "S. S. Gulak Artemovsky"
+      },
+      "role": "Director"
+    },
+    {
+      "date": "1952",
+      "product": {
+        "title": "Rusalka",
+        "author": "А. S. Dargomyzhsky"
+      },
+      "role": "Director"
+    },
+    {
+      "date": "1960",
+      "product": {
+        "title": "Queen of spades",
+        "author": "P. I. Tchaikovsky"
+      },
+      "role": "Director"
+    }
+  ],
+  "images": [
+    "https://www.sb.by/upload/medialibrary/d3f/d3fe6cd9626ee82429a5b1d8d1fe2578.jpg",
+    "https://www.sb.by/upload/medialibrary/ddb/ddbf09bc5aa9a7039330b6ebe8505522.jpg",
+    "https://www.sb.by/upload/medialibrary/2a2/2a2ec6c4e359ec06d95f5247c8c29e6e.jpg",
+    "https://www.sb.by/upload/medialibrary/d76/d769a003a660176919b2a5cb8fa96cb6.jpg",
+    "https://www.sb.by/upload/medialibrary/377/3775af02273a590150a1e89012960225.jpg",
+    "https://www.sb.by/upload/medialibrary/bc0/bc0db9c1de606f95be2f9cbab1d362fa.jpg"
+  ]
 }
