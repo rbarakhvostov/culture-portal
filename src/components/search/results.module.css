@@ -1,0 +1,16 @@
+.link {
+	text-decoration: none;
+  color: #000;
+}
+
+.results {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.list-item {
+  padding: 1%;
+  border: 1px solid;
+  list-style: none;
+  margin-bottom: 1%;
+}
