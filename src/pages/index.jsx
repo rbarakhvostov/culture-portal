@@ -7,7 +7,7 @@ import DeveloperDay from '../components/developerDay/developerDay';
 const Main = () => (
   <>
     <Header />
-    <DeveloperDay director="alexandrovskaya" />
+    <DeveloperDay />
   </>
 );
 
