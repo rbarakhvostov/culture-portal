@@ -5,7 +5,6 @@ import OverviewStyles from './overview.module.css';
 
 const Overview = ({ director }) => {
   const { t } = useTranslation(director);
-  console.log(director);
 
   return (
     <div className={OverviewStyles.overviewWrapper}>
@@ -16,12 +15,11 @@ const Overview = ({ director }) => {
         <span className={OverviewStyles.description}>{t('description')}</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Overview.propTypes = {
   director: PropTypes.string.isRequired,
 };
-
 
 export default Overview;
