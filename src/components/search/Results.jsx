@@ -10,6 +10,7 @@ const Result = ({ filter }) => {
   const namespaces = useDirectorsNamespaces();
   const { t } = useTranslation(namespaces);
   const results = {};
+
   namespaces.forEach((director, index) => {
     const prop = {
       [t(`${director}:name`)]: namespaces[index],
