@@ -7,7 +7,7 @@ const Overview = ({ director }) => {
   const { t } = useTranslation(director);
 
   return (
-    <div className={OverviewStyles.overviewWrapper}>
+    <div id="overview" className={OverviewStyles.overviewWrapper}>
       <img className={OverviewStyles.img} src={t('img')} alt="" />
       <div className={OverviewStyles.info}>
         <h1 className={OverviewStyles.name}>{t('name')}</h1>

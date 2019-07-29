@@ -14,7 +14,8 @@
 }
 
 .info {
-	display: flex;
+  display: flex;
+  flex-grow: 1;
 	flex-direction: column;
 }
 
@@ -25,5 +26,5 @@
 
 .description {
 	padding: 5%;
-	font-size: 20px;
+  font-size: 20px;
 }
