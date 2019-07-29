@@ -5,6 +5,7 @@ import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
 import Map from '../components/director/Map';
 import Video from '../components/director/Video';
+import Gallery from '../components/director/Gallery';
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
@@ -15,6 +16,7 @@ const Director = ({ location }) => {
       <Sidebar />
       <Video director={director} />
       <Map director={director} />
+      <Gallery director={director} />
     </>
   );
 };
