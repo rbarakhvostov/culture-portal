@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import uniqid from 'uniqid';
 
+import i18next from '../../utils/i18n';
+
 const LanguageSwitcher = () => {
   const languages = ['en', 'ru', 'by'];
-  const { i18n } = useTranslation();
-  const [value, setValue] = useState(i18n.language.slice(0, 2));
+  const { i18n } = useTranslation('layout');
+  const [value, setValue] = useState(i18next.language.slice(0, 2));
 
   const handleChange = (event) => {
     setValue(event.target.value);

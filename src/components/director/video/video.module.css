@@ -1,0 +1,13 @@
+.videoButton {
+  width: 220px;
+  height: 100px;
+  color: #fff;
+  background: black;
+  font-size: 25px;
+  outline: none;
+  border: none;
+}
+
+.videoButton:hover {
+  cursor: pointer;
+}

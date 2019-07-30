@@ -10,19 +10,16 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
-function createData(date, work, role) {
-  return { date, work, role };
-}
+const createData = (date, work, role) => ({ date, work, role });
 
-function getRows(data) {
-  return data.map((item) =>
+const getRows = (data) =>
+  data.map((item) =>
     createData(
       item.date,
       `"${item.product.title}" (${item.product.author})`,
       item.role
     )
   );
-}
 
 const useStyles = makeStyles({
   root: {
@@ -46,20 +43,20 @@ const useStyles = makeStyles({
 const WorksList = ({ director }) => {
   const { t } = useTranslation([director, 'layout']);
   const rows = getRows(t(`${director}:work`));
-  const classes = useStyles();
+  const styles = useStyles();
 
   return (
-    <Paper className={classes.root}>
-      <Table className={classes.table}>
+    <Paper className={styles.root}>
+      <Table className={styles.table}>
         <TableHead>
-          <TableRow className={classes.head}>
-            <TableCell align="center" className={classes.font}>
+          <TableRow className={styles.head}>
+            <TableCell align="center" className={styles.font}>
               {t('layout:table_column_data')}
             </TableCell>
-            <TableCell align="center" className={classes.font}>
+            <TableCell align="center" className={styles.font}>
               {t('layout:table_column_works')}
             </TableCell>
-            <TableCell align="center" className={classes.font}>
+            <TableCell align="center" className={styles.font}>
               {t('layout:table_column_role')}
             </TableCell>
           </TableRow>
