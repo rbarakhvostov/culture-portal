@@ -5,10 +5,11 @@
   "date": "March 1, 1917 - May 2, 2009",
   "city": "Vitebsk",
   "description": "Belarusian actor, director. People's Artist of Belarus, People’s Artist of the USSR.",
+  "img": "https://www.sb.by/upload/medialibrary/fad/fadc415520895b8cfdd9fa06a44e4251.jpg",
   "video": "WckdzuNpPTU",
   "mapData": [
     {
-      "coords": [55.193412, 30.201480],
+      "coords": [55.193412, 30.20148],
       "title": "The Yakub Kolas National Academic Drama Theatre"
     }
   ],
@@ -67,5 +68,12 @@
       },
       "role": "Theater director"
     }
+  ],
+  "images": [
+    "https://www.kino-teatr.ru/acter/album/9703/515992.jpg",
+    "https://www.kino-teatr.ru/acter/album/9703/929953.jpg",
+    "https://www.kino-teatr.ru/acter/album/9703/562561.jpg",
+    "https://www.kino-teatr.ru/acter/album/9703/681767.jpg",
+    "https://www.kino-teatr.ru/acter/album/9703/63402.jpg"
   ]
 }
