@@ -14,7 +14,7 @@ const Developer = ({ id }) => {
   return (
     <div>
       <img src={avatar} alt="developer avatar" />
-      <h2>{t(`${id}`)}</h2>
+      <p>{t(`${id}`)}</p>
       <a href={github}>
         <img src={IconGitHub} alt="github icon" />
       </a>
