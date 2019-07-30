@@ -3,6 +3,8 @@ import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
+const getLanguage = () => i18n.language.slice(0, 2);
+
 const backendConfig = {
   loadPath: '/locales/{{lng}}/{{ns}}.json',
 };
@@ -18,4 +20,5 @@ i18n
     backend: backendConfig,
   });
 
+export { getLanguage };
 export default i18n;
