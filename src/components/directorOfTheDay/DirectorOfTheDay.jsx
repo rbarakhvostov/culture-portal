@@ -7,6 +7,7 @@ import directorOftheDayStyles from './directorOfTheDay.module.css';
 
 const DirectorOfTheDay = () => {
   const director = chooseDirector(useDirectorsNamespaces());
+  console.log(useDirectorsNamespaces());
   return (
     <Link
       to="/director/"
