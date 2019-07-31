@@ -5,7 +5,7 @@ const client = contentful.createClient({
   accessToken: 'JfAKlnv_lv7iKnQg35R952YX0DNu5TWxzDvEx4kW7Os',
 });
 
-const getData = (id) =>
+const getDirectorData = (id) =>
   client.getEntry(id).then((entry) => entry.fields.directorData);
 
-export default getData;
+export default getDirectorData;
