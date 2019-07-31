@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
+import { Element } from 'react-scroll';
 
 import Header from '../components/layout/Header';
-import Sidebar from '../components/layout/Sidebar';
+import Menu from '../components/layout/Menu';
 import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
 import Map from '../components/director/map/Map';
@@ -15,14 +16,28 @@ const Director = ({ location }) => {
 
   return (
     <>
-      <Header />
-      <Sidebar />
-      <Overview director={director} />
-      <Biography director={director} />
-      <WorksList director={director} />
-      <Gallery director={director} />
-      <Video director={director} />
-      <Map director={director} />
+      <Element name="start">
+        <Header />
+      </Element>
+      <Menu />
+      <Element name="overview">
+        <Overview director={director} />
+      </Element>
+      <Element name="biography">
+        <Biography director={director} />
+      </Element>
+      <Element name="workslist">
+        <WorksList director={director} />
+      </Element>
+      <Element name="gallery">
+        <Gallery director={director} />
+      </Element>
+      <Element name="video">
+        <Video director={director} />
+      </Element>
+      <Element name="map">
+        <Map director={director} />
+      </Element>
     </>
   );
 };

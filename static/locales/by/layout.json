@@ -5,5 +5,12 @@
   "table_column_data": "Дата",
   "table_column_works": "Пастаноўка",
   "table_column_role": "Роль",
-  "video_button": "Глядзець відэа"
+  "video_button": "Глядзець відэа",
+  "director_start": "Пачатак",
+  "director_overview": "Аб рэжысёры",
+  "director_biography": "Бiяграфiя",
+  "director_workslist": "Спiс работ",
+  "director_gallery": "Галерэя",
+  "director_video": "Вiдэа",
+  "director_map": "Мапа"
 }
