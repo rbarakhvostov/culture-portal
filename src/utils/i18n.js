@@ -20,5 +20,4 @@ i18n
     backend: backendConfig,
   });
 
-export { getLanguage };
-export default i18n;
+export default getLanguage;
