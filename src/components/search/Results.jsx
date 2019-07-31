@@ -4,10 +4,8 @@ import { Link } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 import uniqid from 'uniqid';
 import Overview from '../director/overview/Overview';
-import getDirectorId from '../../utils/getDirectorsId';
-
+import useDirectorId from '../../utils/useDirectorId';
 import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
-
 import ResultsStyles from './results.module.css';
 
 const Result = ({ filter }) => {
@@ -30,14 +28,14 @@ const Result = ({ filter }) => {
           director.toLowerCase().includes(filter.toLowerCase())
         )
         .map((director) => {
-          const id = getDirectorId(results[director]);
+          const id = useDirectorId(results[director]);
 
           return (
             <li className={ResultsStyles.listItem} key={uniqid()}>
               <Link
                 className={ResultsStyles.link}
                 to="/director/"
-                state={{ director: id }}
+                state={{ director: results[director] }}
               >
                 <Overview id={id} />
               </Link>
