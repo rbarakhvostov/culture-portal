@@ -9,20 +9,24 @@ import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
+import foo from '../utils/contentful';
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
+
+  const data = foo(director);
+  // console.log(`director:${data}`);
 
   return (
     <>
       <Header />
       <Sidebar />
-      <Overview director={director} />
-      <Biography director={director} />
-      <WorksList director={director} />
-      <Gallery director={director} />
-      <Video director={director} />
-      <Map director={director} />
+      <Overview director={data} />
+      <Biography director={data} />
+      <WorksList director={data} />
+      <Gallery director={data} />
+      <Video director={data} />
+      <Map director={data} />
     </>
   );
 };
