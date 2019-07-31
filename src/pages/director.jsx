@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 
 import Header from '../components/layout/Header';
-import Menu from '../components/layout/Menu';
 import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
 import Map from '../components/director/map/Map';
@@ -17,9 +16,7 @@ const Director = ({ location }) => {
   return (
     <>
       <Element name="start">
-        <Header>
-          <Menu />
-        </Header>
+        <Header />
       </Element>
       <Element name="overview">
         <Overview director={director} />
