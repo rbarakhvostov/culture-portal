@@ -7,8 +7,8 @@ import DirectorOfTheDay from '../components/directorOfTheDay/DirectorOfTheDay';
 const Main = () => (
   <>
     <Header />
-    <Team />
     <DirectorOfTheDay />
+    <Team />
   </>
 );
 
