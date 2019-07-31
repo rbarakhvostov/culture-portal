@@ -2,7 +2,9 @@
   "title_header": "Театральные режиссёры Беларуси",
   "link_main-page": "Главная страница",
   "link_search": "Список режиссёров",
+  "table_column_data": "Дата",
+  "table_column_works": "Постановка",
+  "table_column_role": "Роль",
   "video_button": "Смотреть видео",
-  "title-author-block": "Режиссёр дня",
-  "button-author-block": "Перейти"
+  "title-author-block": "Режиссёр дня"
 }

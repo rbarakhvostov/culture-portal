@@ -2,7 +2,9 @@
   "title_header": "Тэатральныя рэжысёры Беларусі",
   "link_main-page": "Галоўная старонка",
   "link_search": "Cпіс рэжысёраў",
+  "table_column_data": "Дата",
+  "table_column_works": "Пастаноўка",
+  "table_column_role": "Роль",
   "video_button": "Глядзець відэа",
-  "title-author-block": "Рэжысёр дня",
-  "button-author-block": "Перайсці"
+  "title-author-block": "Рэжысёр дня"
 }
