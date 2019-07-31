@@ -2,8 +2,6 @@ const chooseDirector = (directorNamespaces) => {
   const day = new Date();
   const shortDay = `${day}`.slice(4, 15);
   let directorNum = Math.floor(Math.random() * directorNamespaces.length);
-  // const director = directorNamespaces[day.getDay()];
-  // if (director) return director;
   if (shortDay === localStorage.getItem('shortDay')) {
     return directorNamespaces[localStorage.getItem('directorNum')];
   }
