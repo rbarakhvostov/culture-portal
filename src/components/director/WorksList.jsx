@@ -41,7 +41,6 @@ const useStyles = makeStyles({
 });
 
 const WorksList = ({ work }) => {
-  console.log(work);
   const { t } = useTranslation('layout');
   const rows = getRows(work);
   const styles = useStyles();

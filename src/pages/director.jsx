@@ -38,18 +38,16 @@ const Director = ({ location }) => {
       </>
     );
 
-  console.log(data);
-
   return (
     <>
       <Header />
       <Sidebar />
       <Overview id={data} />
       <Biography data={data} />
-      <Video video={data.video} />
-      <Gallery path={data.path} />
-      <Map mapData={data.mapData} />
       <WorksList work={data.work} />
+      <Gallery path={data.path} />
+      <Video video={data.video} />
+      <Map mapData={data.mapData} />
     </>
   );
 };
