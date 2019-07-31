@@ -1,5 +1,6 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
 import WorksList from '../components/director/WorksList';
@@ -8,44 +9,47 @@ import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
-import getData from '../utils/contentful';
+import getDirectorData from '../utils/getDirectorData';
+import useDirectorId from '../utils/useDirectorId';
 
 const Director = ({ location }) => {
-  console.log(location.state);
-  const { id } = location.state ? location.state : null;
-  console.log(id);
+  const { director } = location.state ? location.state : null;
+  const id = useDirectorId(director);
+
+  // fix for reload page
+  const { t } = useTranslation();
+  console.log(t);
 
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    async function foo() {
-      const directorData = await getData(id);
-      console.log(directorData);
+    async function fetchData() {
+      const directorData = await getDirectorData(id);
       setData(directorData);
     }
-    foo();
+    fetchData();
   }, [id]);
-  console.log(data);
 
   if (data === null)
     return (
       <>
         <Header />
         <Sidebar />
-        <div>Loading</div>
       </>
     );
+
+  console.log(data);
 
   return (
     <>
       <Header />
       <Sidebar />
-      {/* <Overview director={id} />
-      <Biography director={id} />
-      <WorksList director={id} />
-      <Gallery director={id} />
-      <Video director={id} />
-      <Map director={id} /> */}
+      <Overview id={data} />
+      <Biography data={data} />
+      <Video video={data.video} />
+      <Gallery path={data.path} />
+      <Map mapData={data.mapData} />
+      <WorksList work={data.work} />
     </>
   );
 };
