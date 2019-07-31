@@ -1,6 +1,5 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 import Header from '../components/layout/Header';
 import Sidebar from '../components/layout/Sidebar';
 import WorksList from '../components/director/WorksList';
@@ -9,24 +8,44 @@ import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
-import foo from '../utils/contentful';
+import getData from '../utils/contentful';
 
 const Director = ({ location }) => {
-  const { director } = location.state ? location.state : null;
+  console.log(location.state);
+  const { id } = location.state ? location.state : null;
+  console.log(id);
 
-  const data = foo(director);
-  // console.log(`director:${data}`);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function foo() {
+      const directorData = await getData(id);
+      console.log(directorData);
+      setData(directorData);
+    }
+    foo();
+  }, [id]);
+  console.log(data);
+
+  if (data === null)
+    return (
+      <>
+        <Header />
+        <Sidebar />
+        <div>Loading</div>
+      </>
+    );
 
   return (
     <>
       <Header />
       <Sidebar />
-      <Overview director={data} />
-      <Biography director={data} />
-      <WorksList director={data} />
-      <Gallery director={data} />
-      <Video director={data} />
-      <Map director={data} />
+      {/* <Overview director={id} />
+      <Biography director={id} />
+      <WorksList director={id} />
+      <Gallery director={id} />
+      <Video director={id} />
+      <Map director={id} /> */}
     </>
   );
 };

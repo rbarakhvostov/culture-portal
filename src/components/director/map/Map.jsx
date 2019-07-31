@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 import uniqid from 'uniqid';
 import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
 import getData from '../../../utils/contentful';
@@ -27,8 +26,6 @@ const generatePlacemark = ({ coords, title }) => {
 const Map = ({ id }) => {
   const [data, setData] = useState(null);
 
-  const lng = data.lng === 'en' || undefined ? 'en' : 'ru';
-
   useEffect(() => {
     async function foo() {
       const directorData = await getData(id);
@@ -40,7 +37,7 @@ const Map = ({ id }) => {
   if (data === null) return <div>Loading</div>;
 
   return (
-    <YMaps query={{ lang: lng }}>
+    <YMaps query={{ lang: data.lng }}>
       <YMap className={mapStyle.map} state={mapState(data.mapData[0])}>
         {data.mapData.map((item) => generatePlacemark(item))}
       </YMap>
@@ -49,7 +46,7 @@ const Map = ({ id }) => {
 };
 
 Map.propTypes = {
-  director: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 mapState.propTypes = {
