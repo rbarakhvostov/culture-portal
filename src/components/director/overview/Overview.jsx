@@ -23,7 +23,11 @@ const Overview = ({ id }) => {
 
   return (
     <div id="overview" className={OverviewStyles.overviewWrapper}>
-      <img className={OverviewStyles.img} src={images[data.path].main} alt="" />
+      <img
+        className={OverviewStyles.img}
+        src={images[data.path].main}
+        alt="director"
+      />
       <div className={OverviewStyles.info}>
         <h1 className={OverviewStyles.name}>{data.name}</h1>
         <span className={OverviewStyles.date}>{data.date}</span>

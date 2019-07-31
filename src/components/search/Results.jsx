@@ -20,7 +20,6 @@ const Result = ({ filter }) => {
 
     Object.assign(results, prop);
   });
-
   return (
     <ul className={ResultsStyles.results}>
       {Object.keys(results)

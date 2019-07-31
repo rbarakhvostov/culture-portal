@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "title_header": "Theater directors of Belarus",
     "link_main-page": "Main page",
     "link_search": "List of directors",
@@ -7,3 +8,14 @@
     "table_column_role": "Role",
     "video_button": "Watch the video"
 }
+=======
+  "title_header": "Theater directors of Belarus",
+  "link_main-page": "Main page",
+  "link_search": "List of directors",
+  "table_column_data": "Date",
+  "table_column_works": "Staging",
+  "table_column_role": "Role",
+  "video_button": "Watch the video",
+  "title_director_block": "Director of the day"
+}
+>>>>>>> master
