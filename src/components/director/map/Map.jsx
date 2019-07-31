@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import uniqid from 'uniqid';
 import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
-import getData from '../../../utils/contentful';
+import getLanguege from '../../../utils/i18n';
 import mapStyle from './map.module.css';
 
 const mapState = ({ coords }) => ({
@@ -23,30 +23,19 @@ const generatePlacemark = ({ coords, title }) => {
   return <Placemark {...props} key={uniqid()} />;
 };
 
-const Map = ({ id }) => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    async function foo() {
-      const directorData = await getData(id);
-      setData(directorData);
-    }
-    foo();
-  }, [id]);
-
-  if (data === null) return <div>Loading</div>;
-
+const Map = ({ mapData }) => {
+  const lng = getLanguege() === 'en' ? 'en' : 'ru';
   return (
-    <YMaps query={{ lang: data.lng }}>
-      <YMap className={mapStyle.map} state={mapState(data.mapData[0])}>
-        {data.mapData.map((item) => generatePlacemark(item))}
+    <YMaps query={{ lang: lng }}>
+      <YMap className={mapStyle.map} state={mapState(mapData[0])}>
+        {mapData.map((item) => generatePlacemark(item))}
       </YMap>
     </YMaps>
   );
 };
 
 Map.propTypes = {
-  id: PropTypes.string.isRequired,
+  mapData: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 mapState.propTypes = {

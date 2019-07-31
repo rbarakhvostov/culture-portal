@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import getData from '../../../utils/contentful';
+import useDirectorData from '../../../utils/getDirectorData';
+import useDirectorsImages from '../../../utils/useDirectorsImages';
 import OverviewStyles from './overview.module.css';
 
 const Overview = ({ id }) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    async function foo() {
-      const directorData = await getData(id);
+    const fetchData = async () => {
+      const directorData = await useDirectorData(id);
       setData(directorData);
-    }
-    foo();
+    };
+    if (typeof id !== 'object') {
+      fetchData();
+    } else setData(id);
   }, [id]);
 
-  if (data === null)
-    return (
-      <div id="overview" className={OverviewStyles.overviewWrapper}>
-        Loading
-      </div>
-    );
+  if (data === null) return null;
+
+  const images = useDirectorsImages();
 
   return (
     <div id="overview" className={OverviewStyles.overviewWrapper}>
-      <img className={OverviewStyles.img} src={data.img} alt="" />
+      <img className={OverviewStyles.img} src={images[data.path].main} alt="" />
       <div className={OverviewStyles.info}>
-        <h1 className={OverviewStyles.name}>{data.path}</h1>
+        <h1 className={OverviewStyles.name}>{data.name}</h1>
         <span className={OverviewStyles.date}>{data.date}</span>
         <span className={OverviewStyles.description}>{data.description}</span>
       </div>
@@ -34,7 +34,10 @@ const Overview = ({ id }) => {
 };
 
 Overview.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.objectOf(PropTypes.any).isRequired,
+  ]).isRequired,
 };
 
 export default Overview;

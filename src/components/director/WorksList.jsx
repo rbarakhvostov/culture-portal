@@ -40,9 +40,10 @@ const useStyles = makeStyles({
   },
 });
 
-const WorksList = ({ director }) => {
-  const { t } = useTranslation([director, 'layout']);
-  const rows = getRows(t(`${director}:work`));
+const WorksList = ({ work }) => {
+  console.log(work);
+  const { t } = useTranslation('layout');
+  const rows = getRows(work);
   const styles = useStyles();
 
   return (
@@ -78,7 +79,7 @@ const WorksList = ({ director }) => {
 };
 
 WorksList.propTypes = {
-  director: PropTypes.string.isRequired,
+  work: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default WorksList;

@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 import videoStyle from './video.module.css';
 import './video.css';
 
-const Video = ({ director }) => {
-  const { t } = useTranslation([director, 'layout']);
+const Video = ({ video }) => {
+  const { t } = useTranslation('layout');
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,14 +24,14 @@ const Video = ({ director }) => {
         isOpen={isOpen}
         onClose={() => setIsOpen(!isOpen)}
         channel="youtube"
-        videoId={t('video')}
+        videoId={video}
       />
     </div>
   );
 };
 
 Video.propTypes = {
-  director: PropTypes.string.isRequired,
+  video: PropTypes.string.isRequired,
 };
 
 export default Video;
