@@ -17,9 +17,10 @@ const Director = ({ location }) => {
   return (
     <>
       <Element name="start">
-        <Header />
+        <Header>
+          <Menu />
+        </Header>
       </Element>
-      <Menu />
       <Element name="overview">
         <Overview director={director} />
       </Element>
