@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   loader: {
-    color: '#03d7fc',
+    color: '#607d8b',
   },
 });
 
@@ -20,7 +20,7 @@ const Loader = () => {
 
   return (
     <div className={styles.loaderWrapper}>
-      <CircularProgress className={styles.loader} />
+      <CircularProgress className={styles.loader} size="10vmin" />
     </div>
   );
 };
