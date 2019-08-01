@@ -6,6 +6,12 @@
   "table_column_works": "Постановка",
   "table_column_role": "Роль",
   "video_button": "Смотреть видео",
-  "title_director_block": "Режиссёр дня",
-  "error-message": "Страница не найдена"
+  "director_start": "Начало",
+  "director_overview": "О режиссёре",
+  "director_biography": "Биография",
+  "director_workslist": "Список работ",
+  "director_gallery": "Галерея",
+  "director_video": "Видео",
+  "director_map": "Карта",
+  "title_director_block": "Режиссёр дня"
 }
