@@ -40,9 +40,9 @@ const useStyles = makeStyles({
   },
 });
 
-const WorksList = ({ work }) => {
+const WorksList = ({ works }) => {
   const { t } = useTranslation('layout');
-  const rows = getRows(work);
+  const rows = getRows(works);
   const styles = useStyles();
 
   return (
@@ -78,7 +78,7 @@ const WorksList = ({ work }) => {
 };
 
 WorksList.propTypes = {
-  work: PropTypes.objectOf(PropTypes.any).isRequired,
+  works: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default WorksList;

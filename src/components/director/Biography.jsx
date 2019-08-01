@@ -26,12 +26,12 @@ const getBiography = (data) => {
   ));
 };
 
-const Biography = ({ data }) => {
-  return <Timeline lineColor="#ddd">{getBiography(data.bio)}</Timeline>;
+const Biography = ({ bio }) => {
+  return <Timeline lineColor="#ddd">{getBiography(bio)}</Timeline>;
 };
 
 Biography.propTypes = {
-  data: PropTypes.objectOf(PropTypes.any).isRequired,
+  bio: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Biography;

@@ -2,20 +2,35 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const useDirectorsNamespaces = () => {
   const {
-    allContentfulDirector: { nodes },
+    allContentfulDirector: { group },
   } = useStaticQuery(
     graphql`
       query NameSpaces {
-        allContentfulDirector(filter: { lng: { eq: "en" } }) {
-          nodes {
-            path
+        allContentfulDirector {
+          group(field: path) {
+            fieldValue
+            nodes {
+              lng
+              directorData {
+                name
+              }
+            }
           }
         }
       }
     `
   );
 
-  return nodes.map((item) => item.path);
+  const namespaces = {};
+
+  group.forEach((item) => {
+    namespaces[item.fieldValue] = {};
+    item.nodes.forEach((prop) => {
+      namespaces[item.fieldValue][prop.lng] = prop.directorData.name;
+    });
+  });
+
+  return namespaces;
 };
 
 export default useDirectorsNamespaces;
