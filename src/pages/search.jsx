@@ -3,6 +3,7 @@ import React, { Suspense, useState } from 'react';
 import Header from '../components/layout/Header';
 import Searchbox from '../components/search/Searchbox';
 import Results from '../components/search/Results';
+import Loader from '../components/Loader';
 
 const Search = () => {
   const [query, setQuery] = useState('');
@@ -19,7 +20,7 @@ const Search = () => {
 const SearchWrapper = () => (
   <>
     {typeof window !== 'undefined' && (
-      <Suspense fallback="loading">
+      <Suspense fallback={<Loader />}>
         <Search />
       </Suspense>
     )}

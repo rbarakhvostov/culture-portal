@@ -10,6 +10,7 @@ import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
+import Loader from '../components/Loader';
 
 const getElements = (data) => {
   return Object.keys(data).map((item) => (
@@ -38,7 +39,7 @@ const Director = ({ location }) => {
 const DirectorWrapper = ({ location }) => (
   <>
     {typeof window !== 'undefined' && (
-      <Suspense fallback="loading">
+      <Suspense fallback={<Loader />}>
         <Director location={location} />
       </Suspense>
     )}
