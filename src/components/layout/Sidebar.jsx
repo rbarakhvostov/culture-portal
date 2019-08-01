@@ -23,6 +23,33 @@ import uniqid from 'uniqid';
 
 const drawerWidth = 240;
 
+const scrollToElement = (element) => {
+  scroller.scrollTo(element, {
+    duration: 1500,
+    delay: 100,
+    smooth: true,
+  });
+};
+
+const mapNameIcon = {
+  start: <StartIcon />,
+  overview: <FaceIcon />,
+  biography: <DateIcon />,
+  workslist: <WorksIcon />,
+  gallery: <PhotoIcon />,
+  video: <VideoIcon />,
+  map: <MapIcon />,
+};
+
+const getListItems = (data, t) => {
+  return Object.keys(data).map((item) => (
+    <ListItem button key={uniqid()} onClick={() => scrollToElement(`${item}`)}>
+      <ListItemIcon>{data[`${item}`]}</ListItemIcon>
+      <ListItemText primary={t(`director_${item}`)} />
+    </ListItem>
+  ));
+};
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -50,15 +77,6 @@ const Sidebar = ({ open, onClose }) => {
     onClose(false);
   };
 
-  const scrollToElement = (element) => {
-    scroller.scrollTo(element, {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      // offset: -80,
-    });
-  };
-
   const styles = useStyles();
   const theme = useTheme();
 
@@ -83,80 +101,7 @@ const Sidebar = ({ open, onClose }) => {
         </IconButton>
       </div>
       <Divider />
-      <List component="nav">
-        <ListItem
-          button
-          key={uniqid()}
-          onClick={() => scrollToElement('start')}
-        >
-          <ListItemIcon>
-            <StartIcon />
-          </ListItemIcon>
-          <ListItemText primary={t('director_start')} />
-        </ListItem>
-
-        <ListItem
-          button
-          key={uniqid()}
-          onClick={() => scrollToElement('overview')}
-        >
-          <ListItemIcon>
-            <FaceIcon />
-          </ListItemIcon>
-          <ListItemText primary={t('director_overview')} />
-        </ListItem>
-
-        <ListItem
-          button
-          key={uniqid()}
-          onClick={() => scrollToElement('biography')}
-        >
-          <ListItemIcon>
-            <DateIcon />
-          </ListItemIcon>
-          <ListItemText primary={t('director_biography')} />
-        </ListItem>
-
-        <ListItem
-          button
-          key={uniqid()}
-          onClick={() => scrollToElement('workslist')}
-        >
-          <ListItemIcon>
-            <WorksIcon />
-          </ListItemIcon>
-          <ListItemText primary={t('director_workslist')} />
-        </ListItem>
-
-        <ListItem
-          button
-          key={uniqid()}
-          onClick={() => scrollToElement('gallery')}
-        >
-          <ListItemIcon>
-            <PhotoIcon />
-          </ListItemIcon>
-          <ListItemText primary={t('director_gallery')} />
-        </ListItem>
-
-        <ListItem
-          button
-          key={uniqid()}
-          onClick={() => scrollToElement('video')}
-        >
-          <ListItemIcon>
-            <VideoIcon />
-          </ListItemIcon>
-          <ListItemText primary={t('director_video')} />
-        </ListItem>
-
-        <ListItem button key={uniqid()} onClick={() => scrollToElement('map')}>
-          <ListItemIcon>
-            <MapIcon />
-          </ListItemIcon>
-          <ListItemText primary={t('director_map')} />
-        </ListItem>
-      </List>
+      <List component="nav">{getListItems(mapNameIcon, t)}</List>
     </Drawer>
   );
 };

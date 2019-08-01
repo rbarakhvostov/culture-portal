@@ -4,21 +4,18 @@ import IconButton from '@material-ui/core/IconButton';
 import SideBar from './Sidebar';
 
 const Menu = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const toggleDrawer = (value) => {
-    setDrawerOpen(value);
-  };
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   return (
     <>
       <IconButton
         aria-label="Menu"
         color="inherit"
-        onClick={() => toggleDrawer(true)}
+        onClick={() => setDrawerOpen(true)}
       >
         <MenuIcon />
       </IconButton>
-      <SideBar open={drawerOpen} onClose={(value) => toggleDrawer(value)} />
+      <SideBar open={isDrawerOpen} onClose={setDrawerOpen} />
     </>
   );
 };

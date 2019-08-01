@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
+import uniqid from 'uniqid';
 
 import Header from '../components/layout/Header';
 import WorksList from '../components/director/WorksList';
@@ -10,34 +11,28 @@ import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
 
+const getElements = (data) => {
+  return Object.keys(data).map((item) => (
+    <Element key={uniqid()} name={item}>
+      {data[`${item}`]}
+    </Element>
+  ));
+};
+
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
 
-  return (
-    <>
-      <Element name="start">
-        <Header />
-      </Element>
-      <Element name="overview">
-        <Overview director={director} />
-      </Element>
-      <Element name="biography">
-        <Biography director={director} />
-      </Element>
-      <Element name="workslist">
-        <WorksList director={director} />
-      </Element>
-      <Element name="gallery">
-        <Gallery director={director} />
-      </Element>
-      <Element name="video">
-        <Video director={director} />
-      </Element>
-      <Element name="map">
-        <Map director={director} />
-      </Element>
-    </>
-  );
+  const mapNameComponent = {
+    start: <Header />,
+    overview: <Overview director={director} />,
+    biography: <Biography director={director} />,
+    workslist: <WorksList director={director} />,
+    gallery: <Gallery director={director} />,
+    video: <Video director={director} />,
+    map: <Map director={director} />,
+  };
+
+  return <>{getElements(mapNameComponent)}</>;
 };
 
 const DirectorWrapper = ({ location }) => (
