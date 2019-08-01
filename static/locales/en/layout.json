@@ -6,5 +6,6 @@
   "table_column_works": "Staging",
   "table_column_role": "Role",
   "video_button": "Watch the video",
-  "title_director_block": "Director of the day"
+  "title_director_block": "Director of the day",
+  "error-message": "Page not found"
 }
