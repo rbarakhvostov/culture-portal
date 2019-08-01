@@ -55,10 +55,10 @@ const Developer = ({ id }) => {
         </CardContent>
       </CardActionArea>
       <CardActions className={styles.actions}>
-        <Button size="small" href={github}>
+        <Button size="small" href={github} target="_blank">
           <img src={IconGitHub} alt="github icon" />
         </Button>
-        <Button size="small" href={worklog}>
+        <Button size="small" href={worklog} target="_blank">
           <img src={IconWorklog} alt="worklog icon" />
         </Button>
       </CardActions>
