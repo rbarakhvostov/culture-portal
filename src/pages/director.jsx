@@ -44,7 +44,6 @@ const Director = ({ location }) => {
     return (
       <>
         <Header />
-        <Sidebar />
       </>
     );
 
