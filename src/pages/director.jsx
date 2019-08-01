@@ -9,6 +9,7 @@ import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
+import Loader from '../components/Loader';
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
@@ -30,7 +31,7 @@ const Director = ({ location }) => {
 const DirectorWrapper = ({ location }) => (
   <>
     {typeof window !== 'undefined' && (
-      <Suspense fallback="loading">
+      <Suspense fallback={<Loader />}>
         <Director location={location} />
       </Suspense>
     )}
