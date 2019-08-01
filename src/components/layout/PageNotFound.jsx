@@ -6,13 +6,13 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'react-i18next';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   messageWrapper: {
     display: 'flex',
     justifyContent: 'center',
   },
   message: {
-    padding: theme.spacing(3, 2),
+    padding: '1vw 1vw',
     width: '20vw',
     display: 'flex',
     flexDirection: 'column',
