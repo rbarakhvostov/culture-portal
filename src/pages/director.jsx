@@ -1,8 +1,10 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import { Element } from 'react-scroll';
+import uniqid from 'uniqid';
+
 import Header from '../components/layout/Header';
-import Sidebar from '../components/layout/Sidebar';
 import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
 import Map from '../components/director/map/Map';
@@ -11,6 +13,14 @@ import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
 import getDirectorData from '../utils/getDirectorData';
 import useDirectorId from '../utils/useDirectorId';
+
+const getElements = (data) => {
+  return Object.keys(data).map((item) => (
+    <Element key={uniqid()} name={item}>
+      {data[`${item}`]}
+    </Element>
+  ));
+};
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
@@ -38,18 +48,17 @@ const Director = ({ location }) => {
       </>
     );
 
-  return (
-    <>
-      <Header />
-      <Sidebar />
-      <Overview id={data} />
-      <Biography data={data} />
-      <WorksList work={data.work} />
-      <Gallery path={data.path} />
-      <Video video={data.video} />
-      <Map mapData={data.mapData} />
-    </>
-  );
+  const mapNameComponent = {
+    start: <Header />,
+    overview: <Overview id={data} />,
+    biography: <Biography data={data} />,
+    workslist: <WorksList work={data.work} />,
+    gallery: <Gallery path={data.path} />,
+    video: <Video video={data.video} />,
+    map: <Map mapData={data.mapData} />,
+  };
+
+  return <>{getElements(mapNameComponent)}</>;
 };
 
 const DirectorWrapper = ({ location }) => (
