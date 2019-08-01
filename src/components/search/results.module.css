@@ -4,13 +4,15 @@
 }
 
 .results {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-item {
   padding: 1%;
-  border: 1px solid;
+  box-shadow: inset 0px 0px 6px rgba(154, 147, 140, 0.5);
   list-style: none;
   margin-bottom: 1%;
 }

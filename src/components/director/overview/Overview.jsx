@@ -8,7 +8,9 @@ const Overview = ({ director }) => {
 
   return (
     <div id="overview" className={OverviewStyles.overviewWrapper}>
-      <img className={OverviewStyles.img} src={t('img')} alt="director" />
+      <div className={OverviewStyles.container}>
+        <img className={OverviewStyles.img} src={t('img')} alt="director" />
+      </div>
       <div className={OverviewStyles.info}>
         <h1 className={OverviewStyles.name}>{t('name')}</h1>
         <span className={OverviewStyles.date}>{t('date')}</span>
