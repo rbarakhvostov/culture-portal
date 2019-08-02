@@ -13,5 +13,6 @@
   "director_gallery": "Галерея",
   "director_video": "Видео",
   "director_map": "Карта",
-  "title_director_block": "Режиссёр дня"
+  "title_director_block": "Режиссёр дня",
+  "error-message": "Страница не найдена"
 }

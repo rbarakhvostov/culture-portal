@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-const useDirectorImages = () => {
+const getDirectorImages = () => {
   const {
     allContentfulAsset: { group },
   } = useStaticQuery(
@@ -40,4 +40,4 @@ const useDirectorImages = () => {
   return images;
 };
 
-export default useDirectorImages;
+export default getDirectorImages;

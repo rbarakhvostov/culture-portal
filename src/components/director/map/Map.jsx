@@ -36,7 +36,7 @@ const Map = ({ mapData }) => {
 };
 
 Map.propTypes = {
-  mapData: PropTypes.objectOf(PropTypes.any).isRequired,
+  mapData: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 mapState.propTypes = {

@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { useTranslation } from 'react-i18next';
-import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
+
 import Overview from '../director/overview/Overview';
+import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
 import chooseDirector from './chooseDirector';
 import directorOftheDayStyles from './directorOfTheDay.module.css';
-import useDirectorId from '../../utils/useDirectorId';
+import getDirectorId from '../../utils/getDirectorId';
 
 const DirectorOfTheDay = () => {
   const { t } = useTranslation('layout');
-  const director = chooseDirector(useDirectorsNamespaces());
-  const id = useDirectorId(director);
+  const namespaces = Object.keys(useDirectorsNamespaces());
+  const director = chooseDirector(namespaces);
+  const id = getDirectorId(director);
   return (
     <Link
       to="/director/"

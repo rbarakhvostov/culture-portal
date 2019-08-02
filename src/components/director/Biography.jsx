@@ -31,7 +31,7 @@ const Biography = ({ bio }) => {
 };
 
 Biography.propTypes = {
-  bio: PropTypes.objectOf(PropTypes.any).isRequired,
+  bio: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default Biography;

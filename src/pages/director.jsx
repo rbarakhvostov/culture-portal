@@ -1,6 +1,5 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
 
@@ -12,7 +11,8 @@ import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
 import getDirectorData from '../utils/getDirectorData';
-import useDirectorId from '../utils/useDirectorId';
+import getDirectorId from '../utils/getDirectorId';
+import Loader from '../components/Loader';
 
 const getElements = (data) => {
   return Object.keys(data).map((item) => (
@@ -24,9 +24,7 @@ const getElements = (data) => {
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
-  const id = useDirectorId(director);
-
-  const { t } = useTranslation();
+  const id = getDirectorId(director);
 
   const [data, setData] = useState(null);
 
@@ -42,6 +40,7 @@ const Director = ({ location }) => {
     return (
       <>
         <Header />
+        <Loader />
       </>
     );
 
@@ -55,13 +54,13 @@ const Director = ({ location }) => {
     map: <Map mapData={data.mapData} />,
   };
 
-  return <>{getElements(mapNameComponent)}</>;
+  return getElements(mapNameComponent);
 };
 
 const DirectorWrapper = ({ location }) => (
   <>
     {typeof window !== 'undefined' && (
-      <Suspense fallback="loading">
+      <Suspense fallback={<Loader />}>
         <Director location={location} />
       </Suspense>
     )}
