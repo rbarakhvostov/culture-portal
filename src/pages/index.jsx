@@ -10,8 +10,8 @@ const Main = () => (
   <>
     <Header />
     <PortalDescription />
-    <Team />
     <DirectorOfTheDay />
+    <Team />
   </>
 );
 
