@@ -39,13 +39,15 @@ const Director = ({ location }) => {
     fetchData();
   }, [id]);
 
-  // if (data === null)
-  //   return (
-  //     <>
-  //       <Header />
-  //       <Loader />
-  //     </>
-  //   );
+  if (data === null)
+    return (
+      <>
+        <Header />
+        <Loader />
+      </>
+    );
+
+  console.log(data.bio);
 
   const mapNameComponent = {
     start: <Header />,

@@ -12,7 +12,7 @@ import ResultsStyles from './results.module.css';
 const Result = ({ filter }) => {
   const directorsData = useDirectorsNamespaces();
   const namespaces = Object.keys(directorsData);
-  const { t } = useTranslation(namespaces);
+  const { t } = useTranslation('layout');
   const results = {};
 
   const lng = getLangueage();
