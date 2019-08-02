@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import uniqid from 'uniqid';
+import { useTranslation } from 'react-i18next';
 import getLangueage from '../../utils/i18n';
 import Overview from '../director/overview/Overview';
 import useDirectorId from '../../utils/useDirectorId';
@@ -19,8 +20,6 @@ const Result = ({ filter }) => {
     const prop = {
       [director]: directorsData[director][lng],
     };
-
-    console.log(prop);
 
     Object.assign(results, prop);
   });

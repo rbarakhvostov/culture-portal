@@ -34,7 +34,6 @@ const useDirectorsNamespaces = () => {
 
     Object.assign(directors, director);
   });
-
   return directors;
 };
 
