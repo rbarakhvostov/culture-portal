@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import getDirectorData from '../../../utils/getDirectorData';
-import getDirectorsImages from '../../../utils/getDirectorsImages';
+import useDirectorData from '../../../utils/useDirectorData';
+import useDirectorsImages from '../../../utils/useDirectorsImages';
 import OverviewStyles from './overview.module.css';
 
 const Overview = ({ id }) => {
@@ -9,7 +9,7 @@ const Overview = ({ id }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const directorData = await getDirectorData(id);
+      const directorData = await useDirectorData(id);
       setData(directorData);
     };
     if (typeof id !== 'object') {
@@ -19,7 +19,7 @@ const Overview = ({ id }) => {
 
   if (data === null) return null;
 
-  const images = getDirectorsImages();
+  const images = useDirectorsImages();
 
   return (
     <div id="overview" className={OverviewStyles.overviewWrapper}>

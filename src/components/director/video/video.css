@@ -8,6 +8,7 @@ iframe {
 .modal-video-movie-wrap {
   width: 100%;
   height: 100%;
+  padding: 0 !important;
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
