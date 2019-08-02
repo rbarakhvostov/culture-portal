@@ -2,6 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import getLanguage from './i18n';
 
 const getDirectorId = (director) => {
+  console.log(director);
   const {
     allContentfulDirector: { group },
   } = useStaticQuery(

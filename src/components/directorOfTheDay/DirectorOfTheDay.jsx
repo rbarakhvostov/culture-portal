@@ -11,6 +11,7 @@ import getDirectorId from '../../utils/getDirectorId';
 const DirectorOfTheDay = () => {
   const { t } = useTranslation('layout');
   const namespaces = Object.keys(useDirectorsNamespaces());
+  console.log(namespaces);
   const director = chooseDirector(namespaces);
   const id = getDirectorId(director);
   return (

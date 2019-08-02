@@ -5,7 +5,7 @@ import uniqid from 'uniqid';
 import { useTranslation } from 'react-i18next';
 import getLangueage from '../../utils/i18n';
 import Overview from '../director/overview/Overview';
-import useDirectorId from '../../utils/useDirectorId';
+import getDirectorId from '../../utils/getDirectorId';
 import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
 import ResultsStyles from './results.module.css';
 
@@ -33,7 +33,7 @@ const Result = ({ filter }) => {
             .includes(filter.toLowerCase())
         )
         .map((director) => {
-          const id = useDirectorId(director);
+          const id = getDirectorId(director);
 
           return (
             <li className={ResultsStyles.listItem} key={uniqid()}>
