@@ -48,8 +48,8 @@ const Director = ({ location }) => {
   const mapNameComponent = {
     start: <Header />,
     overview: <Overview id={data} />,
-    biography: <Biography data={data} />,
-    workslist: <WorksList work={data.work} />,
+    biography: <Biography bio={data.bio} />,
+    workslist: <WorksList works={data.work} />,
     gallery: <Gallery path={data.path} />,
     video: <Video video={data.video} />,
     map: <Map mapData={data.mapData} />,
