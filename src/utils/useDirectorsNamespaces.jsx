@@ -21,14 +21,19 @@ const useDirectorsNamespaces = () => {
     `
   );
 
-  const namespaces = {};
+  const namespaces = [];
 
   group.forEach((item) => {
-    namespaces[item.fieldValue] = {};
-    item.nodes.forEach((prop) => {
-      namespaces[item.fieldValue][prop.lng] = prop.directorData.name;
+    namespaces.push({
+      [item.fieldValue]: {
+        item.nodes.forEach((prop) => {
+        prop.lng = prop.directorData.name;
+      }
+    }),
     });
   });
+
+  console.log(namespaces);
 
   return namespaces;
 };
