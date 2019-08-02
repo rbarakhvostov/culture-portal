@@ -1,4 +1,19 @@
-.directorBlock {
+.directorLink {
   text-decoration: none;
   color: #000000;
+  font-size: 1.5rem;
+}
+
+.directorBlock {
+  width: 40%;
+  margin: 2% auto;
+}
+
+.directorHeader {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background-color: rgb(41, 54, 54);
+  color: #fff;
+  padding: 1%;
 }

@@ -19,12 +19,22 @@ const getElements = (data) => {
   ));
 };
 
+const style = {
+  width: '40%',
+  margin: '0 auto',
+  fontSize: '2rem',
+};
+
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
 
   const mapNameComponent = {
     start: <Header />,
-    overview: <Overview director={director} />,
+    overview: (
+      <div style={style}>
+        <Overview director={director} />
+      </div>
+    ),
     biography: <Biography director={director} />,
     workslist: <WorksList director={director} />,
     gallery: <Gallery director={director} />,

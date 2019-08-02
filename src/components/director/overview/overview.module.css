@@ -1,35 +1,37 @@
 .overview-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
   width: 100%;
-  margin: 5px auto;
+  margin: 2% auto;
 }
 
 .container {
   flex: none;
-  width: 5em;
-  margin-right: 15px;
+  width: 20%;
+  margin-right: 5%;
 }
 
 .name {
-	margin: 0;
-  font-size: 1.3rem;
+  font-size: 1em;
   font-weight: 500;
   color: #101416;
+  margin-bottom: 2%;
 }
 
 .date {
-  font-size: 1rem;
+  font-size: 0.8em;
   font-weight: 500;
   color: #38454d;
   text-decoration: underline;
+  margin-bottom: 3%;
 }
 
 .info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column wrap;
   flex: 1;
-  align-content: space-around;
+  justify-content: flex-start;
 }
 
 .img {
@@ -39,8 +41,7 @@
 }
 
 .description {
-	padding: 10px;
-  font-size: 1rem;
+  font-size: 0.7em;
   color: #38454d;
-  align-self: flex-start;
+  text-align: justify;
 }

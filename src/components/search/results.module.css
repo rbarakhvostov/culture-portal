@@ -1,18 +1,22 @@
 .link {
 	text-decoration: none;
-  color: #000000;
+  color: #888585;
+  margin-left: 5%;
 }
 
 .results {
-  width: 50%;
-  margin: 0 auto;
+  width: 30%;
+  margin: 1% auto;
   display: flex;
   flex-direction: column;
+  padding: 1%;
 }
 
 .list-item {
   padding: 1%;
-  box-shadow: inset 0px 0px 6px rgba(154, 147, 140, 0.5);
   list-style: none;
-  margin-bottom: 1%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
