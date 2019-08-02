@@ -7,7 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Developer from './Developer';
 
-const gitHubIds = ['rbarakhvostov', 'wofec', 'SvetlankaKuzyaka', 'vld-m'];
+const gitHubIds = [
+  'rbarakhvostov',
+  'wofec',
+  'andreikrivets',
+  'SvetlankaKuzyaka',
+  'vld-m',
+];
 
 const useStyles = makeStyles({
   team: {
