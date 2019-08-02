@@ -1,8 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import getLanguage from './i18n';
 
-const getDirectorId = (director) => {
-  console.log(director);
+const useDirectorId = (director) => {
   const {
     allContentfulDirector: { group },
   } = useStaticQuery(
@@ -36,4 +35,4 @@ const getDirectorId = (director) => {
   return directors[director][lng];
 };
 
-export default getDirectorId;
+export default useDirectorId;
