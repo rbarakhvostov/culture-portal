@@ -13,6 +13,7 @@ import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
 import getDirectorData from '../utils/getDirectorData';
 import useDirectorId from '../utils/useDirectorId';
+import Loader from '../components/Loader';
 
 const getElements = (data) => {
   return Object.keys(data).map((item) => (
@@ -42,6 +43,7 @@ const Director = ({ location }) => {
     return (
       <>
         <Header />
+        <Loader />
       </>
     );
 
@@ -61,7 +63,7 @@ const Director = ({ location }) => {
 const DirectorWrapper = ({ location }) => (
   <>
     {typeof window !== 'undefined' && (
-      <Suspense fallback="loading">
+      <Suspense fallback={<Loader />}>
         <Director location={location} />
       </Suspense>
     )}

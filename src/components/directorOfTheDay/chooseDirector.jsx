@@ -1,15 +1,21 @@
 const chooseDirector = (directorNamespaces) => {
   const day = new Date().getDate();
-  let directorNum = Math.floor(Math.random() * directorNamespaces.length);
+  let index = Math.floor(Math.random() * directorNamespaces.length);
+  let director = directorNamespaces[index];
+
   if (day === +localStorage.getItem('day')) {
-    return directorNamespaces[localStorage.getItem('directorNum')];
+    return localStorage.getItem('director');
   }
-  while (directorNum === +localStorage.getItem('directorNum')) {
-    directorNum = Math.floor(Math.random() * directorNamespaces.length);
+
+  while (director === localStorage.getItem('director')) {
+    index = Math.floor(Math.random() * directorNamespaces.length);
+    director = directorNamespaces[index];
   }
-  localStorage.setItem('directorNum', directorNum);
+
+  localStorage.setItem('director', director);
   localStorage.setItem('day', day);
-  return directorNamespaces[directorNum];
+
+  return director;
 };
 
 export default chooseDirector;
