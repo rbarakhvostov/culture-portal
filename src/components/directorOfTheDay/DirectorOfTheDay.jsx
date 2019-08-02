@@ -9,7 +9,8 @@ import useDirectorId from '../../utils/useDirectorId';
 
 const DirectorOfTheDay = () => {
   const { t } = useTranslation('layout');
-  const director = chooseDirector(useDirectorsNamespaces());
+  const namespaces = Object.keys(useDirectorsNamespaces());
+  const director = chooseDirector(namespaces);
   const id = useDirectorId(director);
   return (
     <Link

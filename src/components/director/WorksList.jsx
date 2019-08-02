@@ -78,7 +78,7 @@ const WorksList = ({ work }) => {
 };
 
 WorksList.propTypes = {
-  work: PropTypes.objectOf(PropTypes.any).isRequired,
+  work: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default WorksList;

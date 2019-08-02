@@ -26,9 +26,7 @@ const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
   const id = useDirectorId(director);
 
-  // fix for reload page
   const { t } = useTranslation();
-  console.log(t);
 
   const [data, setData] = useState(null);
 

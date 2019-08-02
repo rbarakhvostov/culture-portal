@@ -25,6 +25,7 @@ const generatePlacemark = ({ coords, title }) => {
 
 const Map = ({ mapData }) => {
   const lng = getLanguege() === 'en' ? 'en' : 'ru';
+
   return (
     <YMaps query={{ lang: lng }}>
       <YMap className={mapStyle.map} state={mapState(mapData[0])}>
