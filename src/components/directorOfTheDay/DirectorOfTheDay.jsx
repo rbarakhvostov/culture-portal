@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { useTranslation } from 'react-i18next';
+import Paper from '@material-ui/core//Paper';
+import Container from '@material-ui/core/Container';
 
 import Overview from '../director/overview/Overview';
 import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
@@ -11,14 +13,20 @@ const DirectorOfTheDay = () => {
   const { t } = useTranslation('layout');
   const director = chooseDirector(useDirectorsNamespaces());
   return (
-    <Link
-      to="/director/"
-      state={{ director }}
-      className={directorOftheDayStyles.directorBlock}
-    >
-      <div>{t('title_director_block')}</div>
-      <Overview director={director} />
-    </Link>
+    <Paper className={directorOftheDayStyles.directorBlock}>
+      <Link
+        to="/director/"
+        state={{ director }}
+        className={directorOftheDayStyles.directorLink}
+      >
+        <div className={directorOftheDayStyles.directorHeader}>
+          {t('title_director_block')}
+        </div>
+        <Container maxWidth="lg">
+          <Overview director={director} />
+        </Container>
+      </Link>
+    </Paper>
   );
 };
 

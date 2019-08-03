@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
-
+import Typography from '@material-ui/core/Typography';
 import Header from '../components/layout/Header';
 import Menu from '../components/layout/Menu';
 import WorksList from '../components/director/WorksList';
@@ -13,23 +13,17 @@ import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
 import Loader from '../components/Loader';
 
-const getElements = (data) => {
-  return Object.keys(data).map((item) => (
-    <Element key={uniqid()} name={item}>
-      {data[`${item}`]}
-    </Element>
-  ));
+const style = {
+  width: '60%',
+  margin: '0 auto',
+  fontSize: '2rem',
+  textAlign: 'center',
 };
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
 
   const mapNameComponent = {
-    start: (
-      <Header>
-        <Menu />
-      </Header>
-    ),
     overview: <Overview director={director} />,
     biography: <Biography director={director} />,
     workslist: <WorksList director={director} />,
@@ -38,7 +32,22 @@ const Director = ({ location }) => {
     map: <Map director={director} />,
   };
 
-  return <>{getElements(mapNameComponent)}</>;
+  return (
+    <>
+      <Element name="start">
+        <Header>
+          <Menu />
+        </Header>
+      </Element>
+      <Typography component="div" style={style}>
+        {Object.keys(mapNameComponent).map((item) => (
+          <Element key={uniqid()} name={item}>
+            {mapNameComponent[`${item}`]}
+          </Element>
+        ))}
+      </Typography>
+    </>
+  );
 };
 
 const DirectorWrapper = ({ location }) => (

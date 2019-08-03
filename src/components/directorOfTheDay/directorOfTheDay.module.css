@@ -1,4 +1,24 @@
-.directorBlock {
+.directorLink {
   text-decoration: none;
   color: #000000;
+  font-size: 1.8rem;
+}
+
+.directorBlock {
+  width: 50%;
+  margin: 30px auto;
+}
+
+.directorHeader {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #607d8b;
+  color: #fff;
+  padding: 1%;
+}
+
+.directorBlock:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }

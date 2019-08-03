@@ -6,15 +6,16 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   wrapper: {
-    width: '70%',
+    width: '60%',
     margin: '0 auto',
     padding: '0 10px',
     textAlign: 'justify',
     overflow: 'hidden',
+    boxShadow: 'none',
   },
   title: {
     marginBottom: '10px',
-    fontSize: '1.5em',
+    fontSize: '1.7em',
     fontWeight: '700',
     textAlign: 'center',
   },

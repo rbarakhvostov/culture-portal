@@ -1,16 +1,22 @@
 .link {
-	text-decoration: none;
-  color: #000000;
+  text-decoration: none;
+  color: #888585;
+  margin-left: 5%;
 }
 
 .results {
-  width: 80%;
-  margin: 0 auto;
+  width: 30%;
+  margin: 1% auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
 }
 
 .list-item {
   padding: 1%;
-  border: 1px solid;
   list-style: none;
-  margin-bottom: 1%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

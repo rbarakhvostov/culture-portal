@@ -9,17 +9,18 @@ const getBiography = (data) => {
     <TimelineItem
       key={uniqid()}
       dateText={item.date}
-      style={{ color: 'rgb(10, 7, 7)' }}
+      style={{ color: '#1e2a30' }}
       dateInnerStyle={{
-        background:
-          'linear-gradient(45deg, rgb(116, 99, 99) 30%, rgb(10, 7, 7) 90%)',
+        background: 'linear-gradient(45deg, #607d8b 30%, #1e2a30 90%)',
         color: '#ffffff',
-        fontSize: '1.2rem',
+        fontSize: '0.7em',
       }}
       bodyContainerStyle={{
         padding: '10px',
         borderRadius: '8px',
-        boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+        boxShadow: '0.5em 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+        fontSize: '0.5em',
+        textAlign: 'justify',
       }}
     >
       <p>{item.description}</p>
