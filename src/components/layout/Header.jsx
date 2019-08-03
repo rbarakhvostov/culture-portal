@@ -18,6 +18,9 @@ const useStyles = makeStyles({
     margin: '0 4vw',
     color: '#ffffff',
   },
+  toolBar: {
+    position: 'relative',
+  },
 });
 
 const Header = ({ children }) => {

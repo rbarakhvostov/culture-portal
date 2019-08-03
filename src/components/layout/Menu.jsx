@@ -8,7 +8,8 @@ import SideBar from './Sidebar';
 
 const useStyles = makeStyles({
   button: {
-    marginLeft: 'auto',
+    position: 'absolute',
+    right: '2%',
   },
 });
 
