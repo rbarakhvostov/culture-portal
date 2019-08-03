@@ -17,3 +17,8 @@
   color: #fff;
   padding: 1%;
 }
+
+.directorBlock:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

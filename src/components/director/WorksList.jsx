@@ -23,7 +23,7 @@ const getRows = (data) =>
 
 const useStyles = makeStyles({
   root: {
-    width: '70%',
+    width: '80%',
     margin: '20px auto',
     overflowX: 'auto',
   },
