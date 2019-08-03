@@ -2,7 +2,6 @@ import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
-
 import Header from '../components/layout/Header';
 import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
@@ -10,8 +9,8 @@ import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
-import getDirectorData from '../utils/getDirectorData';
-import getDirectorId from '../utils/getDirectorId';
+import useDirectorData from '../utils/useDirectorData';
+import useDirectorId from '../utils/useDirectorId';
 import Loader from '../components/Loader';
 
 const getElements = (data) => {
@@ -24,13 +23,13 @@ const getElements = (data) => {
 
 const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
-  const id = getDirectorId(director);
+  const id = useDirectorId(director);
 
   const [data, setData] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      const directorData = await getDirectorData(id);
+      const directorData = await useDirectorData(id);
       setData(directorData);
     }
     fetchData();

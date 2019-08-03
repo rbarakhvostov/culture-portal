@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uniqid from 'uniqid';
 import { Carousel } from 'react-responsive-carousel';
-import getDirectorsImages from '../../../utils/getDirectorsImages';
+import useDirectorsImages from '../../../utils/useDirectorsImages';
 import CarouselStyles from './gallery.module.css';
 import './carousel.css';
 
 const Gallery = ({ path }) => {
-  const images = getDirectorsImages();
+  const images = useDirectorsImages();
 
   return (
     <Carousel className={CarouselStyles.carousel}>
