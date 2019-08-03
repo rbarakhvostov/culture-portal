@@ -4,6 +4,7 @@ import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
 
 import Header from '../components/layout/Header';
+import Menu from '../components/layout/Menu';
 import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
 import Map from '../components/director/map/Map';
@@ -24,7 +25,11 @@ const Director = ({ location }) => {
   const { director } = location.state ? location.state : null;
 
   const mapNameComponent = {
-    start: <Header />,
+    start: (
+      <Header>
+        <Menu />
+      </Header>
+    ),
     overview: <Overview director={director} />,
     biography: <Biography director={director} />,
     workslist: <WorksList director={director} />,
