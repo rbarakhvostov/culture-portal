@@ -1,5 +1,5 @@
 .link {
-	text-decoration: none;
+  text-decoration: none;
   color: #888585;
   margin-left: 5%;
 }
@@ -15,7 +15,7 @@
 .list-item {
   padding: 1%;
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

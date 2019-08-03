@@ -23,7 +23,7 @@ const getRows = (data) =>
 
 const useStyles = makeStyles({
   root: {
-    width: '30%',
+    width: '70%',
     margin: '20px auto',
     overflowX: 'auto',
   },
@@ -31,12 +31,15 @@ const useStyles = makeStyles({
     minWidth: 350,
   },
   head: {
-    background:
-      'linear-gradient(45deg, rgb(116, 99, 99) 30%, rgb(10, 7, 7) 90%)',
+    background: 'linear-gradient(45deg, #607d8b 30%, #1e2a30 90%)',
   },
-  font: {
+  fontHeader: {
     color: '#ffffff',
-    fontSize: '1.5rem',
+    fontSize: '0.7em',
+  },
+  fontContent: {
+    color: '#1e2a30',
+    fontSize: '0.5em',
   },
 });
 
@@ -50,13 +53,13 @@ const WorksList = ({ director }) => {
       <Table className={styles.table}>
         <TableHead>
           <TableRow className={styles.head}>
-            <TableCell align="center" className={styles.font}>
+            <TableCell align="center" className={styles.fontHeader}>
               {t('layout:table_column_data')}
             </TableCell>
-            <TableCell align="center" className={styles.font}>
+            <TableCell align="center" className={styles.fontHeader}>
               {t('layout:table_column_works')}
             </TableCell>
-            <TableCell align="center" className={styles.font}>
+            <TableCell align="center" className={styles.fontHeader}>
               {t('layout:table_column_role')}
             </TableCell>
           </TableRow>
@@ -64,11 +67,20 @@ const WorksList = ({ director }) => {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={uniqid()}>
-              <TableCell component="th" scope="row" align="center">
+              <TableCell
+                component="th"
+                scope="row"
+                align="center"
+                className={styles.fontContent}
+              >
                 {row.date}
               </TableCell>
-              <TableCell align="left">{row.work}</TableCell>
-              <TableCell align="center">{row.role}</TableCell>
+              <TableCell align="left" className={styles.fontContent}>
+                {row.work}
+              </TableCell>
+              <TableCell align="left" className={styles.fontContent}>
+                {row.role}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
