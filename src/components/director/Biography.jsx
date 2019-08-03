@@ -1,6 +1,5 @@
 import React from 'react';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
-import { useTranslation } from 'react-i18next';
 import uniqid from 'uniqid';
 import PropTypes from 'prop-types';
 
@@ -28,14 +27,12 @@ const getBiography = (data) => {
   ));
 };
 
-const Biography = ({ director }) => {
-  const { t } = useTranslation(director);
-
-  return <Timeline lineColor="#ddd">{getBiography(t('bio'))}</Timeline>;
+const Biography = ({ bio }) => {
+  return <Timeline lineColor="#ddd">{getBiography(bio)}</Timeline>;
 };
 
 Biography.propTypes = {
-  director: PropTypes.string.isRequired,
+  bio: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default Biography;

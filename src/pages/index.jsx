@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-
 import Header from '../components/layout/Header';
 import Team from '../components/main/team/Team';
 import DirectorOfTheDay from '../components/directorOfTheDay/DirectorOfTheDay';

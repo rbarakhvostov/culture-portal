@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { makeStyles } from '@material-ui/core/styles';
 import AccessibilityIcon from '@material-ui/icons/AccessibilityNew';
 import Paper from '@material-ui/core/Paper';

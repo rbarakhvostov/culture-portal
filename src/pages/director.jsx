@@ -1,7 +1,8 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
+import { useTranslation } from 'react-i18next';
 import Typography from '@material-ui/core/Typography';
 import Header from '../components/layout/Header';
 import Menu from '../components/layout/Menu';
@@ -11,6 +12,8 @@ import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
+import useDirectorData from '../utils/useDirectorData';
+import useDirectorId from '../utils/useDirectorId';
 import Loader from '../components/Loader';
 
 const style = {
@@ -21,15 +24,40 @@ const style = {
 };
 
 const Director = ({ location }) => {
+  const { t } = useTranslation('layout');
   const { director } = location.state ? location.state : null;
+  const id = useDirectorId(director);
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const directorData = await useDirectorData(id);
+      setData(directorData);
+    }
+    fetchData();
+  }, [id]);
+
+  if (data === null)
+    return (
+      <>
+        <Header />
+        <Loader />
+      </>
+    );
 
   const mapNameComponent = {
-    overview: <Overview director={director} />,
-    biography: <Biography director={director} />,
-    workslist: <WorksList director={director} />,
-    gallery: <Gallery director={director} />,
-    video: <Video director={director} />,
-    map: <Map director={director} />,
+    start: (
+      <Header>
+        <Menu />
+      </Header>
+    ),
+    overview: <Overview id={data} />,
+    biography: <Biography bio={data.bio} />,
+    workslist: <WorksList works={data.work} />,
+    gallery: <Gallery path={data.path} />,
+    video: <Video video={data.video} />,
+    map: <Map mapData={data.mapData} />,
   };
 
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
-import { useTranslation } from 'react-i18next';
 import uniqid from 'uniqid';
+import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
+import getLanguege from '../../../utils/i18n';
 import mapStyle from './map.module.css';
 
 const mapState = ({ coords }) => ({
@@ -23,22 +23,20 @@ const generatePlacemark = ({ coords, title }) => {
   return <Placemark {...props} key={uniqid()} />;
 };
 
-const Map = ({ director }) => {
-  const { t } = useTranslation(director);
-
-  const lng = t('lng') === 'en' ? 'en' : 'ru';
+const Map = ({ mapData }) => {
+  const lng = getLanguege() === 'en' ? 'en' : 'ru';
 
   return (
     <YMaps query={{ lang: lng }}>
-      <YMap className={mapStyle.map} state={mapState(t('mapData')[0])}>
-        {t('mapData').map((item) => generatePlacemark(item))}
+      <YMap className={mapStyle.map} state={mapState(mapData[0])}>
+        {mapData.map((item) => generatePlacemark(item))}
       </YMap>
     </YMaps>
   );
 };
 
 Map.propTypes = {
-  director: PropTypes.string.isRequired,
+  mapData: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 mapState.propTypes = {

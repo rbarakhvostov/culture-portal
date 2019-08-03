@@ -2,14 +2,18 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const useDirectorsNamespaces = () => {
   const {
-    allEnJson: { edges },
+    allContentfulDirector: { group },
   } = useStaticQuery(
     graphql`
-      query Namespaces {
-        allEnJson(filter: { lng: { ne: null } }) {
-          edges {
-            node {
-              path
+      query NameSpaces {
+        allContentfulDirector {
+          group(field: path) {
+            fieldValue
+            nodes {
+              lng
+              directorData {
+                name
+              }
             }
           }
         }
@@ -17,7 +21,21 @@ const useDirectorsNamespaces = () => {
     `
   );
 
-  return edges.map((item) => item.node.path.slice(1));
+  const directors = {};
+
+  group.forEach((obj) => {
+    const director = {
+      [obj.fieldValue]: {},
+    };
+
+    obj.nodes.forEach((item) => {
+      director[obj.fieldValue][item.lng] = item.directorData.name;
+    });
+
+    Object.assign(directors, director);
+  });
+
+  return directors;
 };
 
 export default useDirectorsNamespaces;

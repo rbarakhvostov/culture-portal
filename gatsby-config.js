@@ -28,6 +28,13 @@ module.exports = {
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `gwm80bq77yih`,
+        accessToken: `JfAKlnv_lv7iKnQg35R952YX0DNu5TWxzDvEx4kW7Os`,
+      },
+    },
   ],
   pathPrefix: '/culture-portal',
 };

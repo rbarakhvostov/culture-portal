@@ -1,5 +1,4 @@
 import React, { Suspense, useState } from 'react';
-
 import Header from '../components/layout/Header';
 import Searchbox from '../components/search/Searchbox';
 import Results from '../components/search/Results';

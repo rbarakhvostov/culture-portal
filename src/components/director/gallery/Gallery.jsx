@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 import uniqid from 'uniqid';
-
-import './carousel.css';
 import { Carousel } from 'react-responsive-carousel';
+import useDirectorsImages from '../../../utils/useDirectorsImages';
 import CarouselStyles from './gallery.module.css';
+import './carousel.css';
 
-const Gallery = ({ director }) => {
-  const { t } = useTranslation(director);
+const Gallery = ({ path }) => {
+  const images = useDirectorsImages();
 
   return (
     <Carousel className={CarouselStyles.carousel}>
-      {t('images').map((item) => (
+      {images[path].gallery.map((item) => (
         <div key={uniqid()} className={CarouselStyles.imageWrapper}>
           <img className={CarouselStyles.image} src={item} alt="" />
         </div>
@@ -22,7 +21,7 @@ const Gallery = ({ director }) => {
 };
 
 Gallery.propTypes = {
-  director: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default Gallery;
