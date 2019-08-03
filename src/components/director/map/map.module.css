@@ -1,6 +1,6 @@
 .map {
-  width: 60%;
-  height: 40vw;
-  margin: 50px 0;
-  border: 1px solid black;
+  width: 80%;
+  height: 40vh;
+  margin: 30px auto;
+  box-shadow: 10px 10px 10px -5px #1e2a30;
 }

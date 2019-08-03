@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import Paper from '@material-ui/core/Paper';
 import DirectorItem from './DirectorItem';
 import getLangueage from '../../utils/i18n';
 import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
@@ -26,11 +27,13 @@ const Result = ({ filter }) => {
   );
 
   return (
-    <ul className={ResultsStyles.results}>
-      {filtered.map((director) => (
-        <DirectorItem director={director} key={director} />
-      ))}
-    </ul>
+    <Paper className={ResultsStyles.results}>
+      <ul>
+        {filtered.map((director) => (
+          <DirectorItem director={director} key={director} />
+        ))}
+      </ul>
+    </Paper>
   );
 };
 

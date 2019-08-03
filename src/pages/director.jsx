@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
 import { useTranslation } from 'react-i18next';
+import Typography from '@material-ui/core/Typography';
 import Header from '../components/layout/Header';
 import Menu from '../components/layout/Menu';
 import WorksList from '../components/director/WorksList';
@@ -15,12 +16,11 @@ import useDirectorData from '../utils/useDirectorData';
 import useDirectorId from '../utils/useDirectorId';
 import Loader from '../components/Loader';
 
-const getElements = (data) => {
-  return Object.keys(data).map((item) => (
-    <Element key={uniqid()} name={item}>
-      {data[`${item}`]}
-    </Element>
-  ));
+const style = {
+  width: '60%',
+  margin: '0 auto',
+  fontSize: '2rem',
+  textAlign: 'center',
 };
 
 const Director = ({ location }) => {
@@ -60,7 +60,22 @@ const Director = ({ location }) => {
     map: <Map mapData={data.mapData} />,
   };
 
-  return getElements(mapNameComponent);
+  return (
+    <>
+      <Element name="start">
+        <Header>
+          <Menu />
+        </Header>
+      </Element>
+      <Typography component="div" style={style}>
+        {Object.keys(mapNameComponent).map((item) => (
+          <Element key={uniqid()} name={item}>
+            {mapNameComponent[`${item}`]}
+          </Element>
+        ))}
+      </Typography>
+    </>
+  );
 };
 
 const DirectorWrapper = ({ location }) => (

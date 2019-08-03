@@ -6,6 +6,7 @@ import OverviewStyles from './overview.module.css';
 
 const Overview = ({ id }) => {
   const [data, setData] = useState(null);
+  const images = useDirectorsImages();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,15 +20,15 @@ const Overview = ({ id }) => {
 
   if (data === null) return null;
 
-  const images = useDirectorsImages();
-
   return (
     <div id="overview" className={OverviewStyles.overviewWrapper}>
-      <img
-        className={OverviewStyles.img}
-        src={images[data.path].main}
-        alt="director"
-      />
+      <div className={OverviewStyles.container}>
+        <img
+          className={OverviewStyles.img}
+          src={images[data.path].main}
+          alt="director"
+        />
+      </div>
       <div className={OverviewStyles.info}>
         <h1 className={OverviewStyles.name}>{data.name}</h1>
         <span className={OverviewStyles.date}>{data.date}</span>

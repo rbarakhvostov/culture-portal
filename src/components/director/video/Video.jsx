@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ModalVideo from 'react-modal-video';
+import VideoIcon from '@material-ui/icons/Videocam';
 
 import { useTranslation } from 'react-i18next';
 import videoStyle from './video.module.css';
@@ -18,6 +19,7 @@ const Video = ({ video }) => {
         className={videoStyle.videoButton}
         onClick={() => setIsOpen(!isOpen)}
       >
+        <VideoIcon fontSize="medium" className={videoStyle.videoIcon} />
         {t('layout:video_button')}
       </button>
       <ModalVideo
