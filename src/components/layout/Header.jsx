@@ -1,21 +1,51 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 
 import LanguageSwitcher from './LanguageSwitcher';
 import Navigation from './Navigation';
-import Menu from './Menu';
 
-const Header = () => {
+const useStyles = makeStyles({
+  appBar: {
+    backgroundColor: '#34515e',
+  },
+  title: {
+    margin: '0 4vw',
+    color: '#ffffff',
+  },
+});
+
+const Header = ({ children }) => {
   const { t } = useTranslation('layout');
+  const styles = useStyles();
 
   return (
-    <>
-      <LanguageSwitcher />
-      <h1>{t('title_header')}</h1>
+    <div>
+      <AppBar className={styles.appBar} position="static">
+        <Toolbar className={styles.toolBar}>
+          <LanguageSwitcher />
+          <Typography variant="h5" className={styles.title}>
+            {t('title_header')}
+          </Typography>
+          {children}
+        </Toolbar>
+      </AppBar>
       <Navigation />
-      <Menu />
-    </>
+    </div>
   );
+};
+
+Header.propTypes = {
+  children: PropTypes.element,
+};
+
+Header.defaultProps = {
+  children: null,
 };
 
 export default Header;

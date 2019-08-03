@@ -4,6 +4,7 @@ import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/layout/Header';
+import Menu from '../components/layout/Menu';
 import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
 import Map from '../components/director/map/Map';
@@ -46,7 +47,11 @@ const Director = ({ location }) => {
     );
 
   const mapNameComponent = {
-    start: <Header />,
+    start: (
+      <Header>
+        <Menu />
+      </Header>
+    ),
     overview: <Overview id={data} />,
     biography: <Biography bio={data.bio} />,
     workslist: <WorksList works={data.work} />,
