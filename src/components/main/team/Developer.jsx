@@ -48,7 +48,7 @@ const Developer = ({ id }) => {
           image={avatar}
           title="Developer avatar"
         />
-        <CardContent className={styles.nameWrapper}>
+        <CardContent>
           <Typography className={styles.name} component="p" align="center">
             {t(`${id}`)}
           </Typography>

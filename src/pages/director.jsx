@@ -4,12 +4,14 @@ import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
 import Typography from '@material-ui/core/Typography';
 import Header from '../components/layout/Header';
+import Menu from '../components/layout/Menu';
 import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
 import Map from '../components/director/map/Map';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
 import Overview from '../components/director/overview/Overview';
+import Loader from '../components/Loader';
 
 const style = {
   width: '60%',
@@ -33,7 +35,9 @@ const Director = ({ location }) => {
   return (
     <>
       <Element name="start">
-        <Header />
+        <Header>
+          <Menu />
+        </Header>
       </Element>
       <Typography component="div" style={style}>
         {Object.keys(mapNameComponent).map((item) => (
@@ -49,7 +53,7 @@ const Director = ({ location }) => {
 const DirectorWrapper = ({ location }) => (
   <>
     {typeof window !== 'undefined' && (
-      <Suspense fallback="loading">
+      <Suspense fallback={<Loader />}>
         <Director location={location} />
       </Suspense>
     )}
