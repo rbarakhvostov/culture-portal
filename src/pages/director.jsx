@@ -2,6 +2,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
+import { useTranslation } from 'react-i18next';
 import Header from '../components/layout/Header';
 import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
@@ -22,6 +23,7 @@ const getElements = (data) => {
 };
 
 const Director = ({ location }) => {
+  const { t } = useTranslation('layout');
   const { director } = location.state ? location.state : null;
   const id = useDirectorId(director);
 

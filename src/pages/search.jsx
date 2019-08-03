@@ -1,13 +1,18 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
+
 import Header from '../components/layout/Header';
-import SearchBlock from '../components/search/SearchBlock';
+import Searchbox from '../components/search/Searchbox';
+import Results from '../components/search/Results';
 import Loader from '../components/Loader';
 
 const Search = () => {
+  const [query, setQuery] = useState('');
+
   return (
     <>
       <Header />
-      <SearchBlock />
+      <Searchbox value={query} onChange={setQuery} />
+      <Results filter={query} />
     </>
   );
 };
