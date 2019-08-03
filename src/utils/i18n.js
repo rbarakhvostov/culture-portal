@@ -18,4 +18,6 @@ i18n
     backend: backendConfig,
   });
 
-export default i18n;
+const getLanguage = () => i18n.language.slice(0, 2);
+
+export default getLanguage;
