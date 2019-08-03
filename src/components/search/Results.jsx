@@ -5,7 +5,7 @@ import uniqid from 'uniqid';
 import { useTranslation } from 'react-i18next';
 import getLangueage from '../../utils/i18n';
 import Overview from '../director/overview/Overview';
-import useDirectorId from '../../utils/useDirectorId';
+import useDirectorId from '../../utils/getDirectorId';
 import useDirectorsNamespaces from '../../utils/useDirectorsNamespaces';
 import ResultsStyles from './results.module.css';
 
@@ -36,7 +36,7 @@ const Result = ({ filter }) => {
           const id = useDirectorId(director);
 
           return (
-            <li className={ResultsStyles.listItem} key={uniqid()}>
+            <li className={ResultsStyles.listItem} key={director}>
               <Link
                 className={ResultsStyles.link}
                 to="/director/"

@@ -1,21 +1,17 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense } from 'react';
 
 import Header from '../components/layout/Header';
 import Searchbox from '../components/search/Searchbox';
 import Results from '../components/search/Results';
 import Loader from '../components/Loader';
 
-const Search = () => {
-  const [query, setQuery] = useState('');
-
-  return (
-    <>
-      <Header />
-      <Searchbox value={query} onChange={setQuery} />
-      <Results filter={query} />
-    </>
-  );
-};
+const Search = () => (
+  <>
+    <Header />
+    <Searchbox />
+    <Results />
+  </>
+);
 
 const SearchWrapper = () => (
   <>
