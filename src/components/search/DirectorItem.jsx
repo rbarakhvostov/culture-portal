@@ -35,7 +35,7 @@ const DirectorItem = ({ director }) => {
       <li className={styles.item}>
         <Overview id={id} />
         <Link className={styles.link} to="/director/" state={{ director }}>
-          <IconButton size="medium">
+          <IconButton>
             <ArrowButton fontSize="large" />
           </IconButton>
         </Link>
