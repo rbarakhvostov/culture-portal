@@ -49,7 +49,7 @@ const useStyles = makeStyles({
 
 const Developer = ({ id }) => {
   const github = `http://github.com/${id}`;
-  const worklog = `http://vld-m.github.io/culture-portal/worklogs/${id}.md`;
+  const worklog = `http://vld-m.github.io/culture-portal/worklogs/${id}`;
   const avatar = `${github}.png`;
   const { t } = useTranslation('team');
   const styles = useStyles();
