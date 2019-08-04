@@ -34,6 +34,10 @@ const useStyles = makeStyles({
   },
   actions: {
     justifyContent: 'center',
+    '@media (min-width:520px) and (max-width:768px)': {
+      display: 'flex',
+      flexDirection: 'column',
+    },
   },
   name: {
     fontSize: '1.5vw',

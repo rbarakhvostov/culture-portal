@@ -23,6 +23,9 @@ const useStyles = makeStyles({
   notfound: {
     margin: '1%',
     fontSize: '20px',
+    '@media (max-width:520px)': {
+      fontSize: '15px',
+    },
   },
 });
 
