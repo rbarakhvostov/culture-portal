@@ -25,7 +25,6 @@ const useStyles = makeStyles({
     backgroundColor: '#607d8b',
   },
   link: {
-    fontSize: '24px',
     textDecoration: 'none',
   },
 });

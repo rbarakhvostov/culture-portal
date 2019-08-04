@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
   members: {
     display: 'flex',
-    margin: '2vh 0',
+    margin: '5vh 0',
     justifyContent: 'center',
   },
 });
