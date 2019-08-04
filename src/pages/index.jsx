@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react';
+
 import Header from '../components/layout/Header';
-import Team from '../components/main/team/Team';
-import DirectorOfTheDay from '../components/directorOfTheDay/DirectorOfTheDay';
-import Loader from '../components/Loader';
 import PortalDescription from '../components/main/PortalDescription';
+import DirectorOfTheDay from '../components/main/directorOfTheDay/DirectorOfTheDay';
+import Team from '../components/main/team/Team';
+import Loader from '../components/layout/Loader';
 
 const Main = () => (
   <>
