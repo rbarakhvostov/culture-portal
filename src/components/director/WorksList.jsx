@@ -41,35 +41,35 @@ const useStyles = makeStyles({
     fontSize: '24px',
     fontWeight: 400,
     color: '#ffffff',
-    ['@media only screen and (max-width: 768px)']: {
+    '@media only screen and (max-width: 768px)': {
       fontSize: '16px',
     },
-    ['@media only screen and (max-width: 450px)']: {
+    '@media only screen and (max-width: 450px)': {
       fontSize: '14px',
     },
-    ['@media only screen and (max-width: 390px)']: {
+    '@media only screen and (max-width: 390px)': {
       fontSize: '12px',
     },
-    ['@media only screen and (max-width: 360px)']: {
+    '@media only screen and (max-width: 360px)': {
       fontSize: '10px',
     },
-    ['@media only screen and (max-width: 330px)']: {
+    '@media only screen and (max-width: 330px)': {
       fontSize: '8px',
     },
   },
   fontContent: {
     color: '#1e2a30',
     fontSize: '16px',
-    ['@media only screen and (max-width: 768px)']: {
+    '@media only screen and (max-width: 768px)': {
       fontSize: '12px',
     },
-    ['@media only screen and (max-width: 450px)']: {
+    '@media only screen and (max-width: 450px)': {
       fontSize: '10px',
     },
-    ['@media only screen and (max-width: 390px)']: {
+    '@media only screen and (max-width: 390px)': {
       fontSize: '8px',
     },
-    ['@media only screen and (max-width: 360px)']: {
+    '@media only screen and (max-width: 360px)': {
       fontSize: '6px',
     },
   },
