@@ -34,6 +34,7 @@ const Director = ({ location }) => {
 
   useEffect(() => {
     async function fetchData() {
+      setData(null);
       const directorData = await useDirectorData(id);
       setData(directorData);
     }
