@@ -2,6 +2,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
+import { makeStyles } from '@material-ui/core/styles';
 import uniqid from 'uniqid';
 
 import Typography from '@material-ui/core/Typography';
@@ -18,14 +19,17 @@ import Loader from '../components/layout/Loader';
 import useDirectorData from '../utils/useDirectorData';
 import useDirectorId from '../utils/useDirectorId';
 
-const style = {
-  width: '75%',
-  margin: '0 auto',
-  fontSize: '32px',
-};
+const useStyles = makeStyles(() => ({
+  container: {
+    width: '75%',
+    margin: '0 auto',
+    fontSize: '32px',
+  },
+}));
 
 const Director = ({ location }) => {
   const { t } = useTranslation('layout');
+  const styles = useStyles();
   const { director } = location.state ? location.state : null;
   const id = useDirectorId(director);
 
@@ -66,7 +70,7 @@ const Director = ({ location }) => {
           <Menu />
         </Header>
       </Element>
-      <Typography component="div" style={style}>
+      <Typography component="div" className={styles.container}>
         {Object.keys(mapNameComponent).map((item) => (
           <Element key={uniqid()} name={item}>
             {mapNameComponent[`${item}`]}
