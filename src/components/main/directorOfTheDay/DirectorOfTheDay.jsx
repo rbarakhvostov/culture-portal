@@ -16,10 +16,10 @@ const useStyles = makeStyles({
     margin: '100px auto',
     boxShadow: 'none',
     cursor: 'pointer',
-    ['@media only screen and (max-width: 768px)']: {
+    '@media only screen and (max-width: 768px)': {
       width: '95%',
     },
-    ['@media only screen and (min-width: 1400px)']: {
+    '@media only screen and (min-width: 1400px)': {
       width: '60%',
     },
   },

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
 
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Header from '../components/layout/Header';
 import Menu from '../components/layout/Menu';
@@ -22,16 +23,21 @@ const style = {
   margin: '0 auto',
   padding: '1%',
   fontSize: '32px',
-  ['@media only screen  and (min-width: 768px)']: {
-    width: '80%',
-    padding: '0',
-  },
 };
+
+const useStyles = makeStyles({
+  wrapper: {
+    '@media only screen and (min-width: 1024px)': {
+      width: '80%',
+    },
+  },
+});
 
 const Director = ({ location }) => {
   const { t } = useTranslation('layout');
   const { director } = location.state ? location.state : null;
   const id = useDirectorId(director);
+  const styles = useStyles();
 
   const [data, setData] = useState(null);
 
@@ -70,7 +76,7 @@ const Director = ({ location }) => {
           <Menu />
         </Header>
       </Element>
-      <Typography component="div" style={style}>
+      <Typography component="div" style={style} className={styles.wrapper}>
         {Object.keys(mapNameComponent).map((item) => (
           <Element key={uniqid()} name={item}>
             {mapNameComponent[`${item}`]}
