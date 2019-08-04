@@ -6,6 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowButton from '@material-ui/icons/ArrowForwardIos';
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Overview from '../director/overview/Overview';
 import useDirectorId from '../../utils/useDirectorId';
@@ -18,14 +19,14 @@ const useStyles = makeStyles({
     listStyle: 'none',
     fontSize: ' 1.1rem',
     alignItems: 'center',
-    ['@media only screen  and (max-width: 768px)']: {
+    '@media only screen  and (max-width: 768px)': {
       width: '95%',
       flexDirection: 'column',
       margin: '0 auto',
     },
-    ['@media only screen (min-width: 769px) and (max-width: 1024px)']: {
+    '@media only screen (min-width: 769px) and (max-width: 1024px)': {
       width: '95%',
-    }
+    },
   },
   link: {
     marginLeft: '5%',
@@ -37,8 +38,18 @@ const useStyles = makeStyles({
 const DirectorItem = ({ director }) => {
   const id = useDirectorId(director);
   const styles = useStyles();
+  const matches = useMediaQuery('(max-width:520px)');
 
-  return (
+  return matches ? (
+    <>
+      <li className={styles.item}>
+        <Link className={styles.link} to="/director/" state={{ director }}>
+          <Overview id={id} />
+        </Link>
+      </li>
+      <Divider />
+    </>
+  ) : (
     <>
       <li className={styles.item}>
         <Overview id={id} />
