@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     overflowX: 'auto',
     boxShadow: '0 2.5px 5px 2.5px #00000040',
     borderRadius: '5px',
-    ['@media only screen and (max-width: 1024px)']: {
+    '@media only screen and (max-width: 1024px)': {
       width: '100%',
     },
   },
