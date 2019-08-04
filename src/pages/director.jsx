@@ -47,11 +47,6 @@ const Director = ({ location }) => {
     );
 
   const mapNameComponent = {
-    start: (
-      <Header>
-        <Menu />
-      </Header>
-    ),
     overview: <Overview id={data} />,
     biography: <Biography bio={data.bio} />,
     workslist: <WorksList works={data.work} />,
