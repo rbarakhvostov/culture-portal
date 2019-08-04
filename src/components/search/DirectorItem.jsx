@@ -22,6 +22,9 @@ const useStyles = makeStyles({
       width: '95%',
       flexDirection: 'column',
       margin: '0 auto',
+    },
+    ['@media only screen (min-width: 769px) and (max-width: 1024px)']: {
+      width: '95%',
     }
   },
   link: {
