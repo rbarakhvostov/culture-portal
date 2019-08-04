@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     listStyle: 'none',
     fontSize: ' 1.1rem',
     alignItems: 'center',
-    ['@media only screen and (max-width:425px)']: {
+    ['@media only screen  and (max-width: 768px)']: {
       width: '95%',
       flexDirection: 'column',
       margin: '0 auto',
