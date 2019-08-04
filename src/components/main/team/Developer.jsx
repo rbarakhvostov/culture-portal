@@ -21,15 +21,25 @@ const useStyles = makeStyles({
     margin: '0 0.5vw',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    '@media (max-width:520px)': {
+      width: '50vw',
+      margin: '1vw 0',
+    },
   },
   media: {
     height: '15vw',
+    '@media (max-width:520px)': {
+      height: '30vw',
+    },
   },
   actions: {
     justifyContent: 'center',
   },
   name: {
-    fontSize: '3vh',
+    fontSize: '1.5vw',
+    '@media (max-width:520px)': {
+      fontSize: '3vw',
+    },
   },
 });
 
