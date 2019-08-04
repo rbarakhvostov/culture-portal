@@ -63,6 +63,6 @@
 | 27.07 | 28.07 | 10   | gatsby SSR/build mode troubleshooting             |
 | 29.07 | 29.07 | 2    | developer team component                          |
 | 30.07 | 02.08 | 4    | styling appBar/switcher components w/ material ui |
-| 02.07 | 04.08 | 2    | styling team component w/ material ui             |
+| 02.08 | 04.08 | 2    | styling team component w/ material ui             |
 |       | **Total** | **36.5h** |                                                   |
 
