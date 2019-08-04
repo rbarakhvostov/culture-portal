@@ -14,6 +14,7 @@ const useStyles = makeStyles({
   item: {
     display: 'flex',
     padding: '1%',
+    marginBottom: '1%',
     justifyContent: 'space-between',
     listStyle: 'none',
     fontSize: ' 1.1rem',

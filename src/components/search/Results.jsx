@@ -40,7 +40,7 @@ const Result = ({ filter }) => {
 
   if (!filtered.length)
     return (
-      <Paper className={ResultsStyles.results}>
+      <Paper className={styles.results}>
         <span>{t('director_not_found')}</span>
       </Paper>
     );
