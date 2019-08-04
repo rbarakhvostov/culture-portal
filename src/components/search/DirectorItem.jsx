@@ -18,6 +18,14 @@ const useStyles = makeStyles({
     listStyle: 'none',
     fontSize: ' 1.1rem',
     alignItems: 'center',
+    ['@media only screen  and (max-width: 768px)']: {
+      width: '95%',
+      flexDirection: 'column',
+      margin: '0 auto',
+    },
+    ['@media only screen (min-width: 769px) and (max-width: 1024px)']: {
+      width: '95%',
+    }
   },
   link: {
     marginLeft: '5%',
