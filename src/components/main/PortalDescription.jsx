@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     margin: '30px auto',
     textAlign: 'justify',
     boxShadow: 'none',
-    ['@media only screen and (min-width: 1400px)']: {
+    '@media only screen and (min-width: 1400px)': {
       width: '60%',
     },
   },
