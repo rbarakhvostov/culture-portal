@@ -21,8 +21,7 @@ import useDirectorId from '../utils/useDirectorId';
 const style = {
   width: '75%',
   margin: '0 auto',
-  fontSize: '2rem',
-  textAlign: 'center',
+  fontSize: '32px',
 };
 
 const Director = ({ location }) => {

@@ -15,6 +15,9 @@ const useStyles = makeStyles({
   title: {
     margin: '0 4vw',
     color: '#ffffff',
+    ['@media only screen and (max-width: 520px)']: {
+      fontSize: '1rem',
+    },
   },
   toolBar: {
     position: 'relative',

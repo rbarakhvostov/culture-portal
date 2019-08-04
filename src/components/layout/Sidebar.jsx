@@ -21,8 +21,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import uniqid from 'uniqid';
 
-const drawerWidth = 240;
-
 const scrollToElement = (element) => {
   scroller.scrollTo(element, {
     duration: 1500,
@@ -53,13 +51,6 @@ const getListItems = (data, t) => {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: drawerWidth,
   },
   drawerHeader: {
     display: 'flex',

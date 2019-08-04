@@ -13,7 +13,7 @@ const Gallery = ({ path }) => {
     <Carousel className={CarouselStyles.carousel}>
       {images[path].gallery.map((item) => (
         <div key={uniqid()} className={CarouselStyles.imageWrapper}>
-          <img className={CarouselStyles.image} src={item} alt="" />
+          <img src={item} alt="" />
         </div>
       ))}
     </Carousel>

@@ -1,25 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import uniqid from 'uniqid';
-import PropTypes from 'prop-types';
 
 const getBiography = (data) => {
   return data.map((item) => (
     <TimelineItem
       key={uniqid()}
       dateText={item.date}
-      style={{ color: '#1e2a30' }}
+      style={{ color: '#34515e' }}
       dateInnerStyle={{
-        background: 'linear-gradient(45deg, #607d8b 30%, #1e2a30 90%)',
+        fontSize: '18px',
+        fontWeight: '400',
         color: '#ffffff',
-        fontSize: '0.7em',
+        backgroundColor: '#607d8b',
+        boxShadow: '0 2.5px 5px 2.5px #00000040',
       }}
       bodyContainerStyle={{
         padding: '10px',
-        borderRadius: '8px',
-        boxShadow: '0.5em 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
-        fontSize: '0.5em',
+        fontSize: '16px',
         textAlign: 'justify',
+        boxShadow: '0 2.5px 5px 2.5px #00000040',
+        borderRadius: '5px',
       }}
     >
       <p>{item.description}</p>
@@ -28,7 +30,7 @@ const getBiography = (data) => {
 };
 
 const Biography = ({ bio }) => {
-  return <Timeline lineColor="#ddd">{getBiography(bio)}</Timeline>;
+  return <Timeline lineColor="#dddddd">{getBiography(bio)}</Timeline>;
 };
 
 Biography.propTypes = {
