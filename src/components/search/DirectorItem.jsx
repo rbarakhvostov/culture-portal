@@ -37,7 +37,7 @@ const useStyles = makeStyles({
 const DirectorItem = ({ director }) => {
   const id = useDirectorId(director);
   const styles = useStyles();
-  const matches = useMediaQuery('(max-width:520px)');
+  const matches = useMediaQuery('(max-width:768px)');
 
   return matches ? (
     <>
