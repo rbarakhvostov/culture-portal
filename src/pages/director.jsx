@@ -1,23 +1,25 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import uniqid from 'uniqid';
-import { useTranslation } from 'react-i18next';
+
 import Typography from '@material-ui/core/Typography';
 import Header from '../components/layout/Header';
 import Menu from '../components/layout/Menu';
-import WorksList from '../components/director/WorksList';
 import Biography from '../components/director/Biography';
-import Map from '../components/director/map/Map';
+import WorksList from '../components/director/WorksList';
 import Gallery from '../components/director/gallery/Gallery';
 import Video from '../components/director/video/Video';
+import Map from '../components/director/map/Map';
+
 import Overview from '../components/director/overview/Overview';
+import Loader from '../components/layout/Loader';
 import useDirectorData from '../utils/useDirectorData';
 import useDirectorId from '../utils/useDirectorId';
-import Loader from '../components/Loader';
 
 const style = {
-  width: '60%',
+  width: '75%',
   margin: '0 auto',
   fontSize: '2rem',
   textAlign: 'center',
@@ -32,6 +34,7 @@ const Director = ({ location }) => {
 
   useEffect(() => {
     async function fetchData() {
+      setData(null);
       const directorData = await useDirectorData(id);
       setData(directorData);
     }
@@ -47,11 +50,6 @@ const Director = ({ location }) => {
     );
 
   const mapNameComponent = {
-    start: (
-      <Header>
-        <Menu />
-      </Header>
-    ),
     overview: <Overview id={data} />,
     biography: <Biography bio={data.bio} />,
     workslist: <WorksList works={data.work} />,

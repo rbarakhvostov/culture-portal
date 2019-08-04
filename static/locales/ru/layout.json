@@ -14,5 +14,6 @@
   "director_video": "Видео",
   "director_map": "Карта",
   "title_director_block": "Режиссёр дня",
-  "error-message": "Страница не найдена"
+  "error-message": "Страница не найдена",
+  "search-label": "Поиск"
 }

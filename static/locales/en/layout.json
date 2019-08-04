@@ -14,5 +14,6 @@
   "director_video": "Video",
   "director_map": "Map",
   "title_director_block": "Director of the day",
-  "error-message": "Page not found"
+  "error-message": "Page not found",
+  "search-label": "Search"
 }

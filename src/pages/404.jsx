@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
-import Loader from '../components/Loader';
+
 import Header from '../components/layout/Header';
 import PageNotFound from '../components/layout/PageNotFound';
+import Loader from '../components/layout/Loader';
 
 const NotFound = () => (
   <>
