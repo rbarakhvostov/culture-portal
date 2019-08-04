@@ -13,6 +13,7 @@ const useDirectorsNamespaces = () => {
               lng
               directorData {
                 name
+                city
               }
             }
           }
@@ -29,7 +30,9 @@ const useDirectorsNamespaces = () => {
     };
 
     obj.nodes.forEach((item) => {
-      director[obj.fieldValue][item.lng] = item.directorData.name;
+      director[obj.fieldValue][
+        item.lng
+      ] = `${item.directorData.name} ${item.directorData.city}`;
     });
 
     Object.assign(directors, director);

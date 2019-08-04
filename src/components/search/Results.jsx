@@ -16,6 +16,11 @@ const useStyles = makeStyles({
     margin: '30px auto',
     flexDirection: 'column',
   },
+
+  notfound: {
+    margin: '1%',
+    fontSize: '20px',
+  },
 });
 
 const Result = ({ filter }) => {
@@ -37,6 +42,13 @@ const Result = ({ filter }) => {
   const filtered = Object.keys(results).filter((director) =>
     directorsData[director][lng].toLowerCase().includes(filter.toLowerCase())
   );
+
+  if (!filtered.length)
+    return (
+      <Paper className={styles.results}>
+        <span className={styles.notfound}>{t('director_not_found')}</span>
+      </Paper>
+    );
 
   return (
     <Paper className={styles.results}>
