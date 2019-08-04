@@ -29,7 +29,7 @@ const Header = ({ children }) => {
   const styles = useStyles();
 
   return (
-    <div>
+    <>
       <AppBar className={styles.appBar} position="fixed">
         <Toolbar className={styles.toolBar}>
           <LanguageSwitcher />
@@ -40,7 +40,7 @@ const Header = ({ children }) => {
         </Toolbar>
       </AppBar>
       <Navigation />
-    </div>
+    </>
   );
 };
 

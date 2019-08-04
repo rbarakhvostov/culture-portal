@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     height: '10vh',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: '65px',
   },
   link: {
     textDecoration: 'none',
