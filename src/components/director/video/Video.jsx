@@ -19,7 +19,7 @@ const Video = ({ video }) => {
         className={videoStyle.videoButton}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <VideoIcon fontSize="medium" className={videoStyle.videoIcon} />
+        <VideoIcon fontSize="large" className={videoStyle.videoIcon} />
         {t('layout:video_button')}
       </button>
       <ModalVideo
