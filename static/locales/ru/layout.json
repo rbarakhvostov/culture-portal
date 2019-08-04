@@ -15,5 +15,7 @@
   "director_map": "Карта",
   "title_director_block": "Режиссёр дня",
   "error-message": "Страница не найдена",
-  "search-label": "Поиск"
+  "search-label": "Поиск",
+  "birthplace": "Место рождения",
+  "director_not_found": "Ничего не найдено. Попробуйте ввести другое имя или место рождения, либо изменить язык поиска."
 }
