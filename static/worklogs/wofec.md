@@ -6,5 +6,5 @@
 | Jule 27 | Jule 27 | 2h  | youtube modal video |
 | Jule 27 | Jule 28 | 4h  | gallery |
 | Jule 28 | Jule 30 | 10h | geowidget |
-| Jule 30 | Aug 2 | 30h | cms |
+| Jule 30 | Aug 3 | 32h | cms |
 |         | Total   |     |     |
