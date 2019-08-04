@@ -6,5 +6,5 @@
 | 28.07  | 29.07  | 5h | implementation of the 'director of the day' block |
 | 29.07  | 31.07  | 7h | refactoring and changing the logic of the 'director of the day' block, reading documentation |
 | 01.08  | 01.08  | 2h | implementation of the loader component |
-| 02.07  | 02.07  | 5h | implementation of the portal description, reading Material-UI framework docs |
-|       | **Total** | **25h** |         |
+| 02.07  | 02.07  | 4h | implementation of the portal description, reading Material-UI framework docs |
+|       | **Total** | **24h** |         |
