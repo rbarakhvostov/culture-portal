@@ -26,6 +26,13 @@ const Result = ({ filter }) => {
     directorsData[director][lng].toLowerCase().includes(filter.toLowerCase())
   );
 
+  if (!filtered.length)
+    return (
+      <Paper className={ResultsStyles.results}>
+        <span>{t('director_not_found')}</span>
+      </Paper>
+    );
+
   return (
     <Paper className={ResultsStyles.results}>
       <ul>
