@@ -43,7 +43,6 @@ const useStyles = makeStyles({
     color: '#ffffff',
     ['@media only screen and (max-width: 768px)']: {
       fontSize: '16px',
-      background: 'red',
     },
     ['@media only screen and (max-width: 390px)']: {
       fontSize: '14px',
