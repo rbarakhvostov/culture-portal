@@ -15,6 +15,9 @@ const useStyles = makeStyles({
     width: '75%',
     margin: '30px auto',
     flexDirection: 'column',
+    ['@media only screen and (max-width:425px)']: {
+      width: '95%',
+    }
   },
 });
 
