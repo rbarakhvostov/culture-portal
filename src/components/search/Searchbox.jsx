@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
+
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
-import { useTranslation } from 'react-i18next';
 
 const Searchbox = ({ value, onChange }) => {
   const input = useRef(null);
@@ -10,8 +11,8 @@ const Searchbox = ({ value, onChange }) => {
 
   const useStyles = makeStyles({
     searchArea: {
-      margin: '0 35%',
-      width: '30%',
+      width: '75%',
+      margin: '0 12.5%',
     },
   });
 
