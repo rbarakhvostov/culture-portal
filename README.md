@@ -1,6 +1,29 @@
-#RS School CodeJam worklog
+#RS School CodeJam Culture Portal
 
-# andreikrivets
+# Evaluation:
+
+| Criteria                                                                |  Calculation  |
+| ----------------------------------------------------------------------- | :-----------: |
+| Min scope                                                               |               |
+| Main page + page with a list of authors + author's page                 |      +10      |
+| Page with list of authors contains search widget                        |      +10      |
+| Portal has two languages                                                |      +20      |
+| Normal scope                                                            |               |
+| Author's page contains timeline                                         |      +10      |
+| Author's page contains video overlay                                    |      +10      |
+| Author's page contains photo gallery                                    |      +20      |
+| Author's page contains map (geowidget)                                  |      +10      |
+| Project is made using react (max 40 - if all widgets are done in React) |      +40      |
+| Design                                                                  |      +20      |
+| material-ui is used                                                     |      +20      |
+| Extra scope                                                             |               |
+| Confidence of the project presentation                                  |      +10      |
+| Project is made using gatsbyjs                                          |      +30      |
+| Contentful cms is used for content management                           |      +20      |
+| Portal has third language                                               |      +10      |
+| **TOTAL**                                                               | **up to 240** |
+
+# Krivets Andrei
 
 | Start   | End       | Time    | Feature                     |
 | ------- | --------- | ------- | --------------------------- |
@@ -11,7 +34,7 @@
 | aug 4   | aug 4     | 2h      | add favicon                 |
 |         | **Total** | **16h** |                             |
 
-# rbarakhvostov
+# Barakhvostov Roman
 
 | **Start** | **End**   | **Time** | **Feature**                                                                                          |
 | --------- | --------- | -------- | ---------------------------------------------------------------------------------------------------- |
@@ -23,7 +46,7 @@
 | 04.08     | 04.08     | 4h       | work with responsive design                                                                          |
 |           | **Total** | **28h**  |                                                                                                      |
 
-# SvetlankaKuzyaka
+# Kuznetsova Svetlana
 
 | **Start** | **End**   | **Time** | **Feature**                                                                                                                                                                     |
 | --------- | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,7 +60,7 @@
 | 04.08     | 04.08     | 6h       | added media queries to some of components for adaptive design; refactor & fix code; finished with worklog                                                                       |
 |           | **Total** | **38h**  |
 
-# wofec
+# Dauliash Anton
 
 | Start   | End       | Time    | Feature               |
 | ------- | --------- | ------- | --------------------- |
@@ -51,7 +74,7 @@
 | Aug 4   | Aug 4     | 3h      | fix issues            |
 |         | **Total** | **49h** |                       |
 
-# vld-m
+# Mamontov Vlad
 
 | Start | End       | Time      | Feature                                           |
 | ----- | --------- | --------- | ------------------------------------------------- |
