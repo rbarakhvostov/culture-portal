@@ -16,6 +16,11 @@ const useStyles = makeStyles({
     margin: '30px auto',
     flexDirection: 'column',
   },
+
+  notfound: {
+    margin: '1%',
+    fontSize: '20px',
+  },
 });
 
 const Result = ({ filter }) => {
@@ -41,7 +46,7 @@ const Result = ({ filter }) => {
   if (!filtered.length)
     return (
       <Paper className={styles.results}>
-        <span>{t('director_not_found')}</span>
+        <span className={styles.notfound}>{t('director_not_found')}</span>
       </Paper>
     );
 
