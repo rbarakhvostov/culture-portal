@@ -26,6 +26,13 @@
   margin-bottom: 3%;
 }
 
+.birthplace {
+  font-size: 0.6em;
+  font-weight: 500;
+  color: #1e2a30;
+  margin-bottom: 3%;
+}
+
 .info {
   display: flex;
   flex-flow: column wrap;
