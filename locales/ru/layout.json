@@ -2,5 +2,20 @@
   "title_header": "Театральные режиссёры Беларуси",
   "link_main-page": "Главная страница",
   "link_search": "Список режиссёров",
-  "video_button": "Смотреть видео"
+  "table_column_data": "Дата",
+  "table_column_works": "Постановка",
+  "table_column_role": "Роль",
+  "video_button": "Смотреть видео",
+  "director_start": "Начало",
+  "director_overview": "О режиссёре",
+  "director_biography": "Биография",
+  "director_workslist": "Список работ",
+  "director_gallery": "Галерея",
+  "director_video": "Видео",
+  "director_map": "Карта",
+  "title_director_block": "Режиссёр дня",
+  "error-message": "Страница не найдена",
+  "search-label": "Поиск",
+  "birthplace": "Место рождения",
+  "director_not_found": "Ничего не найдено. Попробуйте ввести другое имя или место рождения, либо изменить язык поиска."
 }

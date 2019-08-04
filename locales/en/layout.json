@@ -2,5 +2,20 @@
   "title_header": "Theater directors of Belarus",
   "link_main-page": "Main page",
   "link_search": "List of directors",
-  "video_button": "Watch the video"
+  "table_column_data": "Date",
+  "table_column_works": "Staging",
+  "table_column_role": "Role",
+  "video_button": "Watch the video",
+  "director_start": "Begin",
+  "director_overview": "About director",
+  "director_biography": "Biography",
+  "director_workslist": "List of works",
+  "director_gallery": "Gallery",
+  "director_video": "Video",
+  "director_map": "Map",
+  "title_director_block": "Director of the day",
+  "error-message": "Page not found",
+  "search-label": "Search",
+  "birthplace": "Birthplace",
+  "director_not_found": "Nothing found. Try entering a different name or place of birth, or change the language."
 }

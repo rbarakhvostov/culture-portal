@@ -2,5 +2,20 @@
   "title_header": "Тэатральныя рэжысёры Беларусі",
   "link_main-page": "Галоўная старонка",
   "link_search": "Cпіс рэжысёраў",
-  "video_button": "Глядзець відэа"
+  "table_column_data": "Дата",
+  "table_column_works": "Пастаноўка",
+  "table_column_role": "Роль",
+  "video_button": "Глядзець відэа",
+  "director_start": "Пачатак",
+  "director_overview": "Аб рэжысёры",
+  "director_biography": "Бiяграфiя",
+  "director_workslist": "Спiс работ",
+  "director_gallery": "Галерэя",
+  "director_video": "Вiдэа",
+  "director_map": "Мапа",
+  "title_director_block": "Рэжысёр дня",
+  "error-message": "Старонка не знойдзена",
+  "search-label": "Пошук",
+  "birthplace": "Месца нараджэння",
+  "director_not_found": "Нічога не знойдзена. Паспрабуйце ўвесці іншае імя або месца нараджэння, альбо змяніць мову пошуку."
 }
