@@ -1,6 +1,6 @@
 .videoButton {
   display: flex;
-  width: 25%;
+  width: 30%;
   margin: 0 auto;
   padding: 2%;
   justify-content: center;
@@ -23,4 +23,22 @@
 .videoIcon {
   margin-right: 3%;
   align-self: center;
+}
+
+@media only screen and (max-width: 520px) {
+  .videoButton {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 768px) {
+  .videoButton {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .videoButton {
+    width: 40%;
+  }
 }
