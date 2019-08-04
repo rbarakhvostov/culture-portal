@@ -7,4 +7,5 @@
 | Jule 27 | Jule 28 | 4h  | gallery |
 | Jule 28 | Jule 30 | 10h | geowidget |
 | Jule 30 | Aug 3 | 32h | cms |
+| Jule 4 | Aug 4 | 2h | add birthplace search |
 |         | Total   |     |     |
