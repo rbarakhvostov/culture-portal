@@ -30,7 +30,7 @@ const Header = ({ children }) => {
 
   return (
     <div>
-      <AppBar className={styles.appBar} position="static">
+      <AppBar className={styles.appBar} position="fixed">
         <Toolbar className={styles.toolBar}>
           <LanguageSwitcher />
           <Typography variant="h5" className={styles.title}>

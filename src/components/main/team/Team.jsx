@@ -23,12 +23,22 @@ const useStyles = makeStyles({
   },
   title: {
     fontFamily: '"Roboto", sans-serif',
-    fontSize: '4vh',
+    fontSize: '2vw',
+    fontWeight: 500,
+    textAlign: 'center',
+    '@media (max-width:520px)': {
+      fontSize: '4vw',
+    },
   },
   members: {
     display: 'flex',
     margin: '5vh 0',
     justifyContent: 'center',
+    '@media (max-width:520px)': {
+      margin: '5vh 0',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
   },
 });
 

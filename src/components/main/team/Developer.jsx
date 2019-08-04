@@ -21,21 +21,35 @@ const useStyles = makeStyles({
     margin: '0 0.5vw',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    '@media (max-width:520px)': {
+      width: '50vw',
+      margin: '1vw 0',
+    },
   },
   media: {
     height: '15vw',
+    '@media (max-width:520px)': {
+      height: '30vw',
+    },
   },
   actions: {
     justifyContent: 'center',
+    '@media (min-width:520px) and (max-width:768px)': {
+      display: 'flex',
+      flexDirection: 'column',
+    },
   },
   name: {
-    fontSize: '3vh',
+    fontSize: '1.5vw',
+    '@media (max-width:520px)': {
+      fontSize: '3vw',
+    },
   },
 });
 
 const Developer = ({ id }) => {
   const github = `http://github.com/${id}`;
-  const worklog = `http://vld-m.github.io/culture-portal/worklogs/${id}.md`;
+  const worklog = `http://vld-m.github.io/culture-portal/worklogs/${id}`;
   const avatar = `${github}.png`;
   const { t } = useTranslation('team');
   const styles = useStyles();

@@ -29,10 +29,11 @@ const useStyles = makeStyles({
     overflowX: 'auto',
     boxShadow: '0 2.5px 5px 2.5px #00000040',
     borderRadius: '5px',
+    ['@media only screen and (max-width: 1024px)']: {
+      width: '100%',
+    },
   },
-  table: {
-    minWidth: 350,
-  },
+
   head: {
     backgroundColor: '#607d8b',
   },
@@ -40,10 +41,37 @@ const useStyles = makeStyles({
     fontSize: '24px',
     fontWeight: 400,
     color: '#ffffff',
+    '@media only screen and (max-width: 768px)': {
+      fontSize: '16px',
+    },
+    '@media only screen and (max-width: 450px)': {
+      fontSize: '14px',
+    },
+    '@media only screen and (max-width: 390px)': {
+      fontSize: '12px',
+    },
+    '@media only screen and (max-width: 360px)': {
+      fontSize: '10px',
+    },
+    '@media only screen and (max-width: 330px)': {
+      fontSize: '8px',
+    },
   },
   fontContent: {
     color: '#1e2a30',
     fontSize: '16px',
+    '@media only screen and (max-width: 768px)': {
+      fontSize: '12px',
+    },
+    '@media only screen and (max-width: 450px)': {
+      fontSize: '10px',
+    },
+    '@media only screen and (max-width: 390px)': {
+      fontSize: '8px',
+    },
+    '@media only screen and (max-width: 360px)': {
+      fontSize: '6px',
+    },
   },
 });
 
@@ -79,10 +107,10 @@ const WorksList = ({ works }) => {
               >
                 {row.date}
               </TableCell>
-              <TableCell align="left" className={styles.fontContent}>
+              <TableCell align="center" className={styles.fontContent}>
                 {row.work}
               </TableCell>
-              <TableCell align="left" className={styles.fontContent}>
+              <TableCell align="center" className={styles.fontContent}>
                 {row.role}
               </TableCell>
             </TableRow>
