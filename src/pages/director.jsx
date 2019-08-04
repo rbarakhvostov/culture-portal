@@ -44,7 +44,9 @@ const Director = ({ location }) => {
   if (data === null)
     return (
       <>
-        <Header />
+        <Header>
+          <Menu />
+        </Header>
         <Loader />
       </>
     );
