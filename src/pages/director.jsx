@@ -19,9 +19,13 @@ import useDirectorData from '../utils/useDirectorData';
 import useDirectorId from '../utils/useDirectorId';
 
 const style = {
-  width: '75%',
   margin: '0 auto',
+  padding: '1%',
   fontSize: '32px',
+  ['@media only screen  and (min-width: 768px)']: {
+    width: '80%',
+    padding: '0',
+  },
 };
 
 const Director = ({ location }) => {

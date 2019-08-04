@@ -189,8 +189,8 @@
   background: #607d8b;
 }
 .carousel .slide img {
-  max-width: 600px;
-  max-height: 600px;
+  object-fit: contain;
+  height: 70vh;
   vertical-align: top;
   border: 0;
 }

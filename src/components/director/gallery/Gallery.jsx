@@ -12,9 +12,7 @@ const Gallery = ({ path }) => {
   return (
     <Carousel className={CarouselStyles.carousel}>
       {images[path].gallery.map((item) => (
-        <div key={uniqid()} className={CarouselStyles.imageWrapper}>
-          <img src={item} alt="" />
-        </div>
+        <img src={item} alt="" key={uniqid()} />
       ))}
     </Carousel>
   );
