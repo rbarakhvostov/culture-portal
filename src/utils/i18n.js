@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
 const backendConfig = {
-  loadPath: '/culture-portal/locales/{{lng}}/{{ns}}.json',
+  loadPath: '/locales/{{lng}}/{{ns}}.json',
 };
 
 i18n
